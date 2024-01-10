@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SafeDeployingViewController" customModule="Multisig" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="MJ0-XY-2Wt" id="Ajd-BI-1GW"/>
+                <outlet property="containerView" destination="gHo-3D-eRz" id="vKr-W7-xBI"/>
+                <outlet property="desciptionLabel" destination="CIP-ib-6cv" id="Lcm-XC-fuk"/>
+                <outlet property="statusLabel" destination="rn6-Av-315" id="IoD-b0-75c"/>
+                <outlet property="txButton" destination="gQw-Bk-lRZ" id="QjV-lY-14W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-3D-eRz" customClass="StyledView" customModule="Multisig" customModuleProvider="target">
+                    <rect key="frame" x="20" y="280" width="374" height="350"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-ZL-Zil">
+                            <rect key="frame" x="32" y="40" width="310" height="270"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="giI-ba-dxh">
+                                    <rect key="frame" x="0.0" y="0.0" width="310" height="201"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="MJ0-XY-2Wt" customClass="LottieAnimationView" customModule="Lottie">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="110"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="110" id="a7K-A4-o3N"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are preparing your Safe Account..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rn6-Av-315">
+                                            <rect key="frame" x="0.0" y="180.5" width="310" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wjf-6y-AVm">
+                                    <rect key="frame" x="0.0" y="229" width="310" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can already explore the app in the meantime." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIP-ib-6cv">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="backgroundSecondary"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9wh-ZL-Zil" secondAttribute="trailing" constant="32" id="Mb4-4P-xMA"/>
+                        <constraint firstItem="9wh-ZL-Zil" firstAttribute="leading" secondItem="gHo-3D-eRz" secondAttribute="leading" constant="32" id="luj-9W-z9j"/>
+                        <constraint firstAttribute="height" constant="350" placeholder="YES" id="mRy-Gq-tFM"/>
+                        <constraint firstAttribute="bottom" secondItem="9wh-ZL-Zil" secondAttribute="bottom" constant="40" id="sP7-ye-cfV"/>
+                        <constraint firstItem="9wh-ZL-Zil" firstAttribute="top" secondItem="gHo-3D-eRz" secondAttribute="top" constant="40" id="vdP-7C-ZRH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQw-Bk-lRZ">
+                    <rect key="frame" x="112" y="662" width="190.5" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fPi-TL-ibr"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="View in block explorer"/>
+                    <connections>
+                        <action selector="didTapViewTransaction:" destination="-1" eventType="touchUpInside" id="8Iw-Eh-Xyj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="backgroundPrimary"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gHo-3D-eRz" secondAttribute="trailing" constant="20" id="4Cz-zW-s8c"/>
+                <constraint firstItem="gHo-3D-eRz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kB9-mf-bMt"/>
+                <constraint firstItem="gHo-3D-eRz" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" placeholder="YES" id="nvb-rA-QT2"/>
+                <constraint firstItem="gQw-Bk-lRZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="urp-5r-Bvq"/>
+                <constraint firstItem="gQw-Bk-lRZ" firstAttribute="top" secondItem="gHo-3D-eRz" secondAttribute="bottom" constant="32" id="zTg-G7-9m4"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="gHo-3D-eRz">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="backgroundPrimary">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundSecondary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "8F045621-4D55-4BC1-96B3-0096873CABEF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Multisig.xcodeproj",
+      "identifier" : "0A93DD522445CC8A00688050",
+      "name" : "Multisig"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Multisig.xcodeproj",
+        "identifier" : "0A93DD6B2445CC8C00688050",
+        "name" : "MultisigTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "CowSwap",
+        "description": "Ethereum's MetaDEX Aggregator that allows to trade with MEV protection",
+        "logo": "https://cowswap.exchange/favicon.png?v=1",
+        "url": "https://cowswap.exchange/"
+    },
+    {
+        "name": "Uniswap",
+        "description": "Decentralized Trading Protocol",
+        "logo": "https://app.uniswap.org/favicon.png",
+        "url": "https://app.uniswap.org/"
+    },
+    {
+        "name": "Balancer",
+        "description": "Balancer is a protocol for programmable liquidity",
+        "logo": "https://balancer.exchange/favicon.ico",
+        "url": "https://balancer.exchange/#/swap"
+    }
+]

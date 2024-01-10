@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "ico-app-settings-desktop-pairing.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "ico-app-settings-desktop-pairing-dark.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

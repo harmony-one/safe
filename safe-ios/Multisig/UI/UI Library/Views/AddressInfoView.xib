@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressInfoView" customModule="Multisig" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="7W9-8E-b4N" id="VoN-mi-qiW"/>
+                <outlet property="copyButton" destination="R5S-g3-hhS" id="nyg-fw-AKq"/>
+                <outlet property="detailButton" destination="6lD-yN-uXE" id="j0S-I4-XbE"/>
+                <outlet property="iconHeightConstraint" destination="Wb0-zh-q3M" id="1dl-h3-USk"/>
+                <outlet property="iconWidthConstraint" destination="hXo-NT-Du3" id="J8C-6B-uUb"/>
+                <outlet property="identiconView" destination="m2N-AO-TdO" id="uCd-7s-cd5"/>
+                <outlet property="textLabel" destination="6JA-RN-38I" id="mXL-36-O7G"/>
+                <outlet property="titleLabel" destination="tCH-2T-TS5" id="g4e-1e-8Pt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bxR-e2-Uyq">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-FU-ZXn">
+                    <rect key="frame" x="0.0" y="0.0" width="349" height="74"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCH-2T-TS5">
+                            <rect key="frame" x="0.0" y="0.0" width="349" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXd-XI-hyg" userLabel="External Button Stack View">
+                            <rect key="frame" x="0.0" y="22" width="349" height="52"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VpS-jo-cak" userLabel="Image Address Stack View">
+                                    <rect key="frame" x="0.0" y="0.0" width="305" height="52"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2N-AO-TdO" customClass="IdenticonView" customModule="Multisig" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="Wb0-zh-q3M"/>
+                                                <constraint firstAttribute="width" constant="52" id="hXo-NT-Du3"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rGe-la-jmo" userLabel="Address Stack View">
+                                            <rect key="frame" x="64" y="3" width="241" height="46"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JA-RN-38I" userLabel="textLabel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="241" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W9-8E-b4N" userLabel="detailLabel">
+                                                    <rect key="frame" x="0.0" y="24.5" width="241" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="KNf-TB-gYg"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lD-yN-uXE" userLabel="Blockchain Explorer Button">
+                                    <rect key="frame" x="305" y="0.0" width="44" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="peA-gz-lMq"/>
+                                    </constraints>
+                                    <state key="normal" image="ico-browse-address"/>
+                                    <connections>
+                                        <action selector="didTapDetailButton" destination="-1" eventType="touchUpInside" id="rG5-23-yOz"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5S-g3-hhS" userLabel="Copy Button">
+                    <rect key="frame" x="0.0" y="22" width="305" height="52"/>
+                    <connections>
+                        <action selector="copyAddress" destination="-1" eventType="touchUpInside" id="n0V-xM-TZG"/>
+                        <action selector="didTouchDownWithSender:forEvent:" destination="-1" eventType="touchDown" id="pBN-k5-Fcb"/>
+                        <action selector="didTouchUpWithSender:forEvent:" destination="-1" eventType="touchUpOutside" id="3zV-W8-8h3"/>
+                        <action selector="didTouchUpWithSender:forEvent:" destination="-1" eventType="touchUpInside" id="ZYe-AJ-gaz"/>
+                        <action selector="didTouchUpWithSender:forEvent:" destination="-1" eventType="touchCancel" id="kRs-fo-KHI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Wa4-Pl-lCu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="R5S-g3-hhS" firstAttribute="leading" secondItem="VpS-jo-cak" secondAttribute="leading" id="5Uc-Xs-h7R"/>
+                <constraint firstItem="R5S-g3-hhS" firstAttribute="bottom" secondItem="VpS-jo-cak" secondAttribute="bottom" id="6KW-uZ-fbV"/>
+                <constraint firstItem="Wa4-Pl-lCu" firstAttribute="trailing" secondItem="IGL-FU-ZXn" secondAttribute="trailing" id="7no-lA-OcQ"/>
+                <constraint firstItem="IGL-FU-ZXn" firstAttribute="leading" secondItem="Wa4-Pl-lCu" secondAttribute="leading" id="AgE-oh-5Vn"/>
+                <constraint firstItem="R5S-g3-hhS" firstAttribute="trailing" secondItem="VpS-jo-cak" secondAttribute="trailing" id="RaG-Cx-9T4"/>
+                <constraint firstItem="IGL-FU-ZXn" firstAttribute="top" secondItem="bxR-e2-Uyq" secondAttribute="top" id="Zlz-XQ-VB8"/>
+                <constraint firstItem="R5S-g3-hhS" firstAttribute="top" secondItem="VpS-jo-cak" secondAttribute="top" id="bqp-tA-y2W"/>
+                <constraint firstAttribute="bottom" secondItem="IGL-FU-ZXn" secondAttribute="bottom" id="jBZ-MA-upX"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-334" y="-353"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico-browse-address" width="24" height="24"/>
+    </resources>
+</document>

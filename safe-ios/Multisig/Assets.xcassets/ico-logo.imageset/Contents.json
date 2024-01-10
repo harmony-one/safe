@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "Safe_Logos_V-Lockup_Black.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Safe_Logos_V-Lockup_White (1).pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
