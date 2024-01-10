@@ -10,6 +10,7 @@ mkdir apis.bundle
 
 2. Add Infura API Key
 Add Infura API Key to "INFURA_API_KEY" in apis-staging.example and apis-prod.example in Multisig > Cross-layer > Configuration
+
 3. Run Encryption
 Create Encryption of those staging and prod examples using secconfig.
 Run:
