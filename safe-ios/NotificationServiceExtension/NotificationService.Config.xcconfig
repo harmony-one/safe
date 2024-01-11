@@ -23,6 +23,6 @@ PRODUCT_BUNDLE_IDENTIFIER           = $(_APP_BUNDLE_ID_$(SERVICE_ENV):default=$(
 // App Groups
 _APP_GROUP_ID_PROD     = group.io.gnosis.multisig.prod.mainnet
 _APP_GROUP_ID_STAGING  = group.io.gnosis.multisig.staging.mainnet
-_APP_GROUP_ID_DEV      = group.io.gnosis.multisig.dev.mainnet
+_APP_GROUP_ID_DEV      = group.harmony.one.dev
 
 APP_GROUP_ID            = $(_APP_GROUP_ID_$(SERVICE_ENV):default=$(_APP_GROUP_ID_PROD))
