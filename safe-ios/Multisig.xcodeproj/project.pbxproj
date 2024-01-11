@@ -1029,7 +1029,7 @@
 		B35BFD0F2A937DC000A9FB15 /* NavigationRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BFD0E2A937DC000A9FB15 /* NavigationRouterTests.swift */; };
 		B3B6044F2A850F5E007BDAC0 /* UIAlertControllerStyle+Multiplatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6044E2A850F5E007BDAC0 /* UIAlertControllerStyle+Multiplatform.swift */; };
 		B3C4D2D92AAF596D0026A8BC /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4D2D82AAF596D0026A8BC /* UIViewController+Navigation.swift */; };
-		B97722162B4EE35D00CF494C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B97722152B4EE35D00CF494C /* GoogleService-Info.plist */; };
+		B93ACC362B4FB633007436AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B93ACC352B4FB633007436AB /* GoogleService-Info.plist */; };
 		D80B5A032769CEAD00D6E024 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B5A022769CEAD00D6E024 /* Tooltip.swift */; };
 		D80B5A052769CF1B00D6E024 /* TooltipSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B5A042769CF1B00D6E024 /* TooltipSource.swift */; };
 		D80B5A072769D05D00D6E024 /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B5A062769D05D00D6E024 /* BaseCustomView.swift */; };
@@ -2084,7 +2084,8 @@
 		B3B6044E2A850F5E007BDAC0 /* UIAlertControllerStyle+Multiplatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertControllerStyle+Multiplatform.swift"; sourceTree = "<group>"; };
 		B3C4D2D82AAF596D0026A8BC /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		B93ACC342B4EF4C3007436AB /* MultisigDebug.Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MultisigDebug.Development.entitlements; sourceTree = "<group>"; };
-		B97722152B4EE35D00CF494C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B93ACC352B4FB633007436AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B93ACC372B5013FF007436AB /* NotificationServiceExtensionDebug.Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationServiceExtensionDebug.Development.entitlements; sourceTree = "<group>"; };
 		D80B5A022769CEAD00D6E024 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		D80B5A042769CF1B00D6E024 /* TooltipSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipSource.swift; sourceTree = "<group>"; };
 		D80B5A062769D05D00D6E024 /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
@@ -3349,7 +3350,7 @@
 				0AF432C5244DFA0200E22E50 /* Data */,
 				0AF432C6244DFA1800E22E50 /* Cross-layer */,
 				0A93DD672445CC8B00688050 /* Info.plist */,
-				B97722152B4EE35D00CF494C /* GoogleService-Info.plist */,
+				B93ACC352B4FB633007436AB /* GoogleService-Info.plist */,
 				0A93DD612445CC8B00688050 /* Preview Content */,
 				0A35CC2F24810CF6005E45BA /* ExportOptions.plist */,
 				D86A68E0274E6AA500D7F5C5 /* main.swift */,
@@ -3658,6 +3659,7 @@
 		0AF2731424DAABDC007E4012 /* NotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B93ACC372B5013FF007436AB /* NotificationServiceExtensionDebug.Development.entitlements */,
 				55AF4CF526C15361006DA1CC /* NotificationServiceExtension_DEV.entitlements */,
 				55AF4CF726C15361006DA1CC /* NotificationServiceExtension_PROD.entitlements */,
 				55AF4CF626C15361006DA1CC /* NotificationServiceExtension_STAGING.entitlements */,
@@ -5043,7 +5045,6 @@
 				049A9D7125F9303000CA5723 /* ChooseOwnerKeyViewController.xib in Resources */,
 				D88FA81F2770869E0023B77F /* TokenAmountField.xib in Resources */,
 				0468C34C2A8E5228009872C2 /* ToDoListView.xib in Resources */,
-				B97722162B4EE35D00CF494C /* GoogleService-Info.plist in Resources */,
 				041E10E02A40E37200D8F980 /* CreateSafeWithSocialIntroViewController.xib in Resources */,
 				6AAE34E5282A824800CCFC95 /* EnterOwnerAddressViewController.xib in Resources */,
 				D80B5A0B2769F95000D6E024 /* AssetsViewController.xib in Resources */,
@@ -5162,6 +5163,7 @@
 				0AADCDC92859BA9F00A0139B /* RequestAddOwnerViewController.xib in Resources */,
 				0AF5C66C27BAA74300BFEA52 /* WebConnectionTableViewCell.xib in Resources */,
 				0A93DD632445CC8B00688050 /* Preview Assets.xcassets in Resources */,
+				B93ACC362B4FB633007436AB /* GoogleService-Info.plist in Resources */,
 				0AE8C0452579317700E62B34 /* DetailDisclosingCell.xib in Resources */,
 				0A478D3425B861D50038363E /* DefaultKeyTableViewCell.xib in Resources */,
 				6A9A770D2804182700C229FC /* BackupIntroViewController.xib in Resources */,
@@ -6192,7 +6194,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Multisig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6201,6 +6203,7 @@
 				);
 				MARKETING_VERSION = 0.2.0;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod;
 				PRODUCT_MODULE_NAME = Multisig;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -6218,7 +6221,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Multisig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6227,6 +6230,7 @@
 				);
 				MARKETING_VERSION = 0.2.0;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod;
 				PRODUCT_MODULE_NAME = Multisig;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -6392,7 +6396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Multisig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6401,6 +6405,7 @@
 				);
 				MARKETING_VERSION = 0.2.0;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.staging;
 				PRODUCT_MODULE_NAME = Multisig;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -6518,7 +6523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Multisig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6527,6 +6532,7 @@
 				);
 				MARKETING_VERSION = 0.2.0;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.staging;
 				PRODUCT_MODULE_NAME = Multisig;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -6615,7 +6621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -6641,6 +6647,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6689,7 +6696,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -6715,6 +6722,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.staging.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6758,7 +6766,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "NotificationServiceExtension/$(CODE_SIGN_ENTITLEMENTS)";
+				CODE_SIGN_ENTITLEMENTS = NotificationServiceExtension/NotificationServiceExtensionDebug.Development.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
@@ -6838,7 +6846,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -6857,6 +6865,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6906,7 +6915,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -6925,6 +6934,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.staging.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6974,7 +6984,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = ZKG876RKJ8;
+				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -6993,6 +7003,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.dev.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

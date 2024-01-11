@@ -60,9 +60,9 @@ GELATO_SERVICE_URL            = https:/$()/relay.gelato.digital
 MOONPAY_SERVICE_URL           = https:/$()/api.moonpay.com
 
 // App Groups
-_APP_GROUP_ID_PROD     = group.io.gnosis.multisig.prod.mainnet
-_APP_GROUP_ID_STAGING  = group.io.gnosis.multisig.staging.mainnet
-_APP_GROUP_ID_DEV      = group.harmony.one.dev
+_APP_GROUP_ID_PROD     = group.harmony.one.safe.prod
+_APP_GROUP_ID_STAGING  = group.harmony.one.safe.staging
+_APP_GROUP_ID_DEV      = group.harmony.one.safe.dev
 
 APP_GROUP_ID            = $(_APP_GROUP_ID_$(SERVICE_ENV):default=$(_APP_GROUP_ID_PROD))
 
