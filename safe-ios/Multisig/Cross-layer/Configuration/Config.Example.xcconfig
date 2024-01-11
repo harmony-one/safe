@@ -27,9 +27,10 @@ INFURA_API_KEY = USE_YOUR_OWN_INFURA_KEY_HERE
 
 // Intercom credentials
 INTERCOM_APP_ID = YOUR_INTERCOM_APP_ID
+
 INTERCOM_API_KEY = YOUR_INTERCOM_API_KEY
 
-WALLETCONNECT_PROJECT_ID = YOUR_WALLETCONNECT_PROJECT_ID
+WALLETCONNECT_PROJECT_ID =
 
 // Configuration Values
 
@@ -39,9 +40,9 @@ _CLIENT_GATEWAY_URL_STAGING    = https:/$()/safe-client.staging.5afe.dev/
 _CLIENT_GATEWAY_URL_PROD       = https:/$()/safe-client.safe.global/
 
 // Apps
-_APP_BUNDLE_ID_PROD     = io.gnosis.multisig.prod.mainnet
-_APP_BUNDLE_ID_STAGING  = io.gnosis.multisig.staging.mainnet
-_APP_BUNDLE_ID_DEV      = io.gnosis.multisig.dev.mainnet
+_APP_GROUP_ID_PROD     = group.harmony.one.safe.prod
+_APP_GROUP_ID_STAGING  = group.harmony.one.safe.staging
+_APP_GROUP_ID_DEV      = group.harmony.one.safe.dev
 
 // Claiming app service
 _CLAIMING_DATA_URL_DEV        = https:/$()/safe-claiming-app-data.staging.5afe.dev/
@@ -138,17 +139,17 @@ PRIVACY_URL     = https:/$()/app.safe.global/privacy
 LICENSES_URL    = https:/$()/app.safe.global/licenses
 
 // Contact Information
-DISCORD_URL             = https:/$()/chat.safe.global/
-TWITTER_URL             = https:/$()/twitter.com/safe
-HELP_CENTER_URL         = https:/$()/help.safe.global/
+DISCORD_URL             = https:/$()/harmony.one/discord
+TWITTER_URL             = https:/$()/harmony.one/twitter
+HELP_CENTER_URL         = https:/$()/t.me/HarmonyDevs
 FEATURE_SUGGESTION_URL  = https:/$()/safe.cnflx.io/
 CONTACT_EMAIL           = support@safe.global
-FORUM_URL               = https:/$()/forum.safe.global/
+FORUM_URL               = https:/$()/talk.harmony.one/
 //TODO: adjust safe dao url
 SAFE_DAO_URL            = https:/$()/snapshot.org/#/safe.eth
 
 // Web app url
-GNOSIS_SAFE_WEB_URL_PROD     = https:/$()/app.safe.global/
+GNOSIS_SAFE_WEB_URL_PROD     = https:/$()/multisig.harmony.one/
 GNOSIS_SAFE_WEB_URL_STAGING     =  https:/$()/safe-team.staging.5afe.dev/app/
 
 // App Review URLs
@@ -184,14 +185,14 @@ ASSETCATALOG_COMPILER_APPICON_NAME  = AppIcon_$(SERVICE_ENV)
 OTHER_LDFLAGS = $(inherited) -fprofile-instr-generate -ObjC
 
 // Set in https://console.cloud.google.com/apis/credentials?project=web3auth-safe&supportedpurview=project
-WEB3AUTH_GOOGLE_CLIENT_ID = YOUR_WEB3AUTH_GOOGLE_CLIENT_ID
+WEB3AUTH_GOOGLE_CLIENT_ID =
 // Set in https://dashboard.web3auth.io/home/customauth
-WEB3AUTH_GOOGLE_VERIFIER_AGGREGATE = YOUR_WEB3AUTH_GOOGLE_VERIFIER_AGGREGATE
-WEB3AUTH_GOOGLE_VERIFIER_SUB = YOUR_WEB3AUTH_GOOGLE_VERIFIER_SUB
+WEB3AUTH_GOOGLE_VERIFIER_AGGREGATE =
+WEB3AUTH_GOOGLE_VERIFIER_SUB =
 
 // Use value from ios OAuth client. Credentials -> Safe{Wallet} (type ios) ->  Additional Information -> iOS URL scheme
 // Do not add :/$()/ at the end. It won't pass the build stage
-WEB3AUTH_REDIRECT_SCHEME = YOUR_WEB3AUTH_REDIRECT_SCHEME
+WEB3AUTH_REDIRECT_SCHEME =
 
 WEB3AUTH_APPLE_VERIFIER_AGGREGATE = apple-aggregate-prod
 _WEB3AUTH_APPLE_VERIFIER_DEV = apple-sub-dev
@@ -199,5 +200,5 @@ _WEB3AUTH_APPLE_VERIFIER_STAGING = apple-sub-staging
 _WEB3AUTH_APPLE_VERIFIER_PROD = apple-sub-prod
 WEB3AUTH_APPLE_VERIFIER = $(_WEB3AUTH_APPLE_VERIFIER_$(SERVICE_ENV):default=$(_WEB3AUTH_APPLE_VERIFIER_PROD))
 
-MOONPAY_API_KEY = YOUR_MOONPAY_API_KEY
-MOONPAY_SECRET_KEY = YOUR_MOONPAY_SECRET_KEY
+MOONPAY_API_KEY =
+MOONPAY_SECRET_KEY =
