@@ -84,6 +84,7 @@ extension Safe {
         case polis = "333999"
         case aurora = "1313161554"
         case auroraTest = "1313161555"
+        case harmony = "1666600000"
     }
 }
 
