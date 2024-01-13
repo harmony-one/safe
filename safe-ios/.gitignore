@@ -3,6 +3,8 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 .env.default
+Multisig/Info.plist
+Multisig/GoogleService-Info.plist
 
 fastlane/
 .DS_Store
