@@ -1050,6 +1050,7 @@
 		D8A6B12D2779D01900438460 /* AdvancedParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6B12B2779D01900438460 /* AdvancedParametersViewController.swift */; };
 		D8A6B12E2779D01900438460 /* AdvancedParametersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A6B12C2779D01900438460 /* AdvancedParametersViewController.xib */; };
 		F762C0B82B506FA00063F2D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F762C0B72B506FA00063F2D7 /* GoogleService-Info.plist */; };
+		F7DD88FD2B52257800DB99CA /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F7DD88FC2B52257800DB99CA /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1482,7 +1483,6 @@
 		0A63C7B32602087E00D36B22 /* SafeInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeInfoRequest.swift; sourceTree = "<group>"; };
 		0A63C7E22602725100D36B22 /* AddressInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfo.swift; sourceTree = "<group>"; };
 		0A6430D9247EC193006FD30A /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		0A6430DB247EC193006FD30A /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		0A6430E1247EC2C7006FD30A /* ConfigurationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationKey.swift; sourceTree = "<group>"; };
 		0A6430F4247ECB3E006FD30A /* ConfigurationKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKeyTests.swift; sourceTree = "<group>"; };
 		0A6430F6247ECCF6006FD30A /* MultisigTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MultisigTests.xctestplan; sourceTree = "<group>"; };
@@ -1556,7 +1556,7 @@
 		0A9366B8279073E3001918A9 /* TextValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
 		0A9366BA27908717001918A9 /* OwnerKeySelectionPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerKeySelectionPolicy.swift; sourceTree = "<group>"; };
 		0A9366BC279090CC001918A9 /* OwnerKeySelectionPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerKeySelectionPolicyTests.swift; sourceTree = "<group>"; };
-		0A93DD532445CC8A00688050 /* Multisig_PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multisig_PROD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A93DD532445CC8A00688050 /* Multisig_PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Multisig_PROD.app; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A93DD562445CC8A00688050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A93DD582445CC8A00688050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A93DD5F2445CC8B00688050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2105,6 +2105,7 @@
 		D8A6B12B2779D01900438460 /* AdvancedParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedParametersViewController.swift; sourceTree = "<group>"; };
 		D8A6B12C2779D01900438460 /* AdvancedParametersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvancedParametersViewController.xib; sourceTree = "<group>"; };
 		F762C0B72B506FA00063F2D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7DD88FC2B52257800DB99CA /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3037,8 +3038,8 @@
 		0A6430D8247EC180006FD30A /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				F7DD88FC2B52257800DB99CA /* Config.xcconfig */,
 				93EE3F6F2760EC7E00111F17 /* IntercomConfig.swift */,
-				0A6430DB247EC193006FD30A /* Config.xcconfig */,
 				0AF7F765247FC28B00527014 /* Config.Example.xcconfig */,
 				0A6430D9247EC193006FD30A /* Production.xcconfig */,
 				0ACDC00924925267002035A2 /* Staging.xcconfig */,
@@ -5076,6 +5077,7 @@
 				550FB1A226691CA300C13D54 /* dapps-mainnet.json in Resources */,
 				0A86EE7525CC2BC30059876E /* LoadingFooterView.xib in Resources */,
 				0AF1C81325408EA000E28669 /* SegmentViewController.xib in Resources */,
+				F7DD88FD2B52257800DB99CA /* Config.xcconfig in Resources */,
 				6AFD26E82859E8FA00336FFE /* InfoBoxView.xib in Resources */,
 				5559A91927675E3700237A5D /* dapps-optimism.json in Resources */,
 				0A04506B278D800700650F71 /* ReviewExecutionViewController.xib in Resources */,
