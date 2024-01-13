@@ -279,6 +279,7 @@ extension Chain {
         static let avalanche = "43114"
         static let optimism = "10"
         static let goerli = "5"
+        static let harmonyTest = "1666700000"
     }
 
     static func mainnetChain() -> Chain {

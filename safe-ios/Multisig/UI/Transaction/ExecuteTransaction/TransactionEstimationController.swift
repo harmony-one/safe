@@ -31,7 +31,9 @@ class TransactionEstimationController {
         // aurora
         "1313161554",
         // Polygon
-        "137"
+        "137",
+        //Harmony
+        "1666700000"
     ]
 
     let rpcClient: JsonRpc2.Client
