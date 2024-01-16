@@ -36,6 +36,8 @@ class DappsDataSource {
         case Chain.ChainID.optimism: path = Bundle.main.path(forResource: "dapps-optimism", ofType: "json")!
         case Chain.ChainID.avalanche: path = Bundle.main.path(forResource: "dapps-avalanche", ofType: "json")!
         case Chain.ChainID.harmonyTest: path = Bundle.main.path(forResource: "dapps-harmonyTest", ofType: "json")!
+        case Chain.ChainID.harmony: path = Bundle.main.path(forResource: "dapps-harmony", ofType: "json")!
+
 
         default:
             dapps = []

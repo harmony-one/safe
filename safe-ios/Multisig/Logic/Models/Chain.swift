@@ -280,6 +280,7 @@ extension Chain {
         static let optimism = "10"
         static let goerli = "5"
         static let harmonyTest = "1666700000"
+        static let harmony = "1666600000"
     }
 
     static func mainnetChain() -> Chain {
