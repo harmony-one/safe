@@ -48,7 +48,7 @@ class TransactionEstimationController {
 
     typealias EstimateCompletion = (Result<(gas: Result<Sol.UInt64, Error>, transactionCount: Result<Sol.UInt64, Error>, gasPrice: Result<Sol.UInt256, Error>, ethCall: Result<Data, Error>, balance: Result<Sol.UInt256, Error>), Error>) -> Void
 
-    func estimateTransactionWithRpc(tx: EthTransaction, block: EthRpc1.BlockSpecifier = .tag(.pending), completion: @escaping EstimateCompletion) -> URLSessionTask? {
+    func estimateTransactionWithRpc(tx: EthTransaction, block: EthRpc1.BlockSpecifier = .tag(.latest), completion: @escaping EstimateCompletion) -> URLSessionTask? {
         // check if we have hint from the chain configuration about the gas price. For now support only fixed.
         // find the first 'fixed' gas price
         var fixedGasPrice: Sol.UInt256? = nil
