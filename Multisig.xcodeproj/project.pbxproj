@@ -1049,8 +1049,8 @@
 		D88FA81F2770869E0023B77F /* TokenAmountField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88FA81D2770869E0023B77F /* TokenAmountField.xib */; };
 		D8A6B12D2779D01900438460 /* AdvancedParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6B12B2779D01900438460 /* AdvancedParametersViewController.swift */; };
 		D8A6B12E2779D01900438460 /* AdvancedParametersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A6B12C2779D01900438460 /* AdvancedParametersViewController.xib */; };
-		F762C0B82B506FA00063F2D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F762C0B72B506FA00063F2D7 /* GoogleService-Info.plist */; };
-		F7DD88FD2B52257800DB99CA /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F7DD88FC2B52257800DB99CA /* Config.xcconfig */; };
+		F77A83EE2B57107100344235 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F77A83ED2B57107100344235 /* Config.xcconfig */; };
+		F7A2D35D2B57367D00995C92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7A2D35C2B57367D00995C92 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1556,7 +1556,7 @@
 		0A9366B8279073E3001918A9 /* TextValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
 		0A9366BA27908717001918A9 /* OwnerKeySelectionPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerKeySelectionPolicy.swift; sourceTree = "<group>"; };
 		0A9366BC279090CC001918A9 /* OwnerKeySelectionPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerKeySelectionPolicyTests.swift; sourceTree = "<group>"; };
-		0A93DD532445CC8A00688050 /* Multisig_PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Multisig_PROD.app; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A93DD532445CC8A00688050 /* Multisig_PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multisig_PROD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A93DD562445CC8A00688050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A93DD582445CC8A00688050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A93DD5F2445CC8B00688050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2104,8 +2104,8 @@
 		D88FA81D2770869E0023B77F /* TokenAmountField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenAmountField.xib; sourceTree = "<group>"; };
 		D8A6B12B2779D01900438460 /* AdvancedParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedParametersViewController.swift; sourceTree = "<group>"; };
 		D8A6B12C2779D01900438460 /* AdvancedParametersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvancedParametersViewController.xib; sourceTree = "<group>"; };
-		F762C0B72B506FA00063F2D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F7DD88FC2B52257800DB99CA /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F77A83ED2B57107100344235 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F7A2D35C2B57367D00995C92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3038,7 +3038,7 @@
 		0A6430D8247EC180006FD30A /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				F7DD88FC2B52257800DB99CA /* Config.xcconfig */,
+				F77A83ED2B57107100344235 /* Config.xcconfig */,
 				93EE3F6F2760EC7E00111F17 /* IntercomConfig.swift */,
 				0AF7F765247FC28B00527014 /* Config.Example.xcconfig */,
 				0A6430D9247EC193006FD30A /* Production.xcconfig */,
@@ -3351,7 +3351,7 @@
 				0AF432C5244DFA0200E22E50 /* Data */,
 				0AF432C6244DFA1800E22E50 /* Cross-layer */,
 				0A93DD672445CC8B00688050 /* Info.plist */,
-				F762C0B72B506FA00063F2D7 /* GoogleService-Info.plist */,
+				F7A2D35C2B57367D00995C92 /* GoogleService-Info.plist */,
 				0A93DD612445CC8B00688050 /* Preview Content */,
 				0A35CC2F24810CF6005E45BA /* ExportOptions.plist */,
 				D86A68E0274E6AA500D7F5C5 /* main.swift */,
@@ -5046,7 +5046,6 @@
 				049A9D7125F9303000CA5723 /* ChooseOwnerKeyViewController.xib in Resources */,
 				D88FA81F2770869E0023B77F /* TokenAmountField.xib in Resources */,
 				0468C34C2A8E5228009872C2 /* ToDoListView.xib in Resources */,
-				F762C0B82B506FA00063F2D7 /* GoogleService-Info.plist in Resources */,
 				041E10E02A40E37200D8F980 /* CreateSafeWithSocialIntroViewController.xib in Resources */,
 				6AAE34E5282A824800CCFC95 /* EnterOwnerAddressViewController.xib in Resources */,
 				D80B5A0B2769F95000D6E024 /* AssetsViewController.xib in Resources */,
@@ -5077,7 +5076,7 @@
 				550FB1A226691CA300C13D54 /* dapps-mainnet.json in Resources */,
 				0A86EE7525CC2BC30059876E /* LoadingFooterView.xib in Resources */,
 				0AF1C81325408EA000E28669 /* SegmentViewController.xib in Resources */,
-				F7DD88FD2B52257800DB99CA /* Config.xcconfig in Resources */,
+				F77A83EE2B57107100344235 /* Config.xcconfig in Resources */,
 				6AFD26E82859E8FA00336FFE /* InfoBoxView.xib in Resources */,
 				5559A91927675E3700237A5D /* dapps-optimism.json in Resources */,
 				0A04506B278D800700650F71 /* ReviewExecutionViewController.xib in Resources */,
@@ -5166,6 +5165,7 @@
 				0AADCDC92859BA9F00A0139B /* RequestAddOwnerViewController.xib in Resources */,
 				0AF5C66C27BAA74300BFEA52 /* WebConnectionTableViewCell.xib in Resources */,
 				0A93DD632445CC8B00688050 /* Preview Assets.xcassets in Resources */,
+				F7A2D35D2B57367D00995C92 /* GoogleService-Info.plist in Resources */,
 				0AE8C0452579317700E62B34 /* DetailDisclosingCell.xib in Resources */,
 				0A478D3425B861D50038363E /* DefaultKeyTableViewCell.xib in Resources */,
 				6A9A770D2804182700C229FC /* BackupIntroViewController.xib in Resources */,

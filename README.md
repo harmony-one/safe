@@ -1,2 +1,0 @@
-# Harmony - safe gnosis wallet
-
