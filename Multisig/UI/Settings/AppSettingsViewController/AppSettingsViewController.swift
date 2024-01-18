@@ -40,7 +40,6 @@ class AppSettingsViewController: UITableViewController {
         }
         
         enum Support: SectionItem {
-            case chatWithUs(String)
             case getSupport(String)
         }
         
@@ -89,36 +88,23 @@ class AppSettingsViewController: UITableViewController {
         let appSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .app, items: [
             Section.App.desktopPairing("Connect to Web"),
             Section.App.ownerKeys("Owner keys", !KeyInfo.keysWithoutBackup().isEmpty, "\(KeyInfo.count())"),
-            Section.App.addressBook("Address Book"),
             Section.App.passcode("Security"),
             Section.App.fiat("Fiat currency", AppSettings.selectedFiatCode),
             Section.App.chainPrefix("Chain prefix"),
-            Section.App.appearance("Appearance"),
             // we do not have experimental features at the moment
             //Section.App.experimental("Experimental")
         ])
-        let supportSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .support("Support & Feedback"), items: [
-            Section.Support.chatWithUs("Chat with us"),
-            Section.Support.getSupport("Help Center")
+        let supportSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .support("Support"), items: [
+            Section.Support.getSupport("Links")
         ])
-        var advancedSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .advanced("Advanced"), items: [
-            Section.Advanced.advanced("Advanced")
-        ])
-        
-        if App.configuration.services.environment != .production {
-            advancedSection.items.append(
-                Section.Advanced.toggles("Feature Toggles")
-            )
-        }
 
         let aboutSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .about("About"), items: [
-            Section.About.aboutGnosisSafe("About Safe{Wallet}"),
+            Section.About.aboutGnosisSafe("About Harmony Multisig Wallet"),
             Section.About.appVersion("App version", "\(app.marketingVersion) (\(app.buildVersion))"),
         ])
         sections += [
             appSection,
             supportSection,
-            advancedSection,
             aboutSection
         ]
     }
@@ -159,7 +145,7 @@ class AppSettingsViewController: UITableViewController {
         let keys = WebConnectionController.shared.accountKeys()
         if keys.isEmpty {
             let addOwnersVC = AddOwnerFirstViewController()
-            addOwnersVC.descriptionText = "To connect to Safe{Wallet} import at least one owner key. Keys are used to confirm transactions."
+            addOwnersVC.descriptionText = "To connect to Harmony Multisig Wallet import at least one owner key. Keys are used to confirm transactions."
             addOwnersVC.onSuccess = { [weak self] in
                 self?.dismiss(animated: true) {
                     _ = self?.showDesktopPairing()
@@ -231,13 +217,6 @@ class AppSettingsViewController: UITableViewController {
         case Section.App.experimental(let name):
             return tableView.basicCell(name: name, icon: "ico-app-settings-package", indexPath: indexPath)
             
-        case Section.Support.chatWithUs(let name):
-            if IntercomConfig.unreadConversationCount() > 0 {
-                return tableView.basicCell(name: name, icon: "ico-app-settings-message-circle-with-badge", indexPath: indexPath)
-            } else {
-                return tableView.basicCell(name: name, icon: "ico-app-settings-message-circle", indexPath: indexPath)
-            }
-
         case Section.Support.getSupport(let name):
             return tableView.basicCell(name: name, icon: "ico-app-settings-support", indexPath: indexPath)
             
@@ -290,11 +269,6 @@ class AppSettingsViewController: UITableViewController {
         case Section.App.experimental:
             let experimentalViewController = ExperimentalViewController()
             show(experimentalViewController, sender: self)
-            
-        case Section.Support.chatWithUs:
-            Tracker.trackEvent(.userOpenIntercom)
-            IntercomConfig.startChat()
-            break
             
         case Section.Support.getSupport:
             let getInTouchVC = GetInTouchView()

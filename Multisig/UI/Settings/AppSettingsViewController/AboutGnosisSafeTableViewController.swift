@@ -16,21 +16,17 @@ class AboutGnosisSafeTableViewController: UITableViewController {
     enum Item {
         case terms(String)
         case privacyPolicy(String)
-        case licenses(String)
-        case rateTheApp(String)
     }
     
     private var items: [Item] = [
         .terms("Terms of use"),
         .privacyPolicy("Privacy policy"),
-        .licenses("Licenses"),
-        .rateTheApp("Rate the app")
     ]
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "About Safe{Wallet}"
+        navigationItem.title = "About Harmony Multisig Wallet"
         
         tableView.registerCell(BasicCell.self)
         
@@ -54,10 +50,6 @@ class AboutGnosisSafeTableViewController: UITableViewController {
             return tableView.basicCell(name: name, indexPath: indexPath)
         case Item.privacyPolicy(let name):
             return tableView.basicCell(name: name, indexPath: indexPath)
-        case Item.licenses(let name):
-            return tableView.basicCell(name: name, indexPath: indexPath)
-        case Item.rateTheApp(let name):
-            return tableView.basicCell(name: name, indexPath: indexPath)
         }
     }
     
@@ -70,12 +62,6 @@ class AboutGnosisSafeTableViewController: UITableViewController {
     
         case Item.privacyPolicy:
             showPrivacyPolicy()
-
-        case Item.licenses:
-            showLicenses()
-
-        case Item.rateTheApp:
-            showRateTheApp()
         }
     }
     
@@ -87,17 +73,6 @@ class AboutGnosisSafeTableViewController: UITableViewController {
     fileprivate func showPrivacyPolicy() {
         openInSafari(legal.privacyURL)
         Tracker.trackEvent(.settingsPrivacyPolicy)
-    }
-    
-    fileprivate func showLicenses() {
-        openInSafari(legal.licensesURL)
-        Tracker.trackEvent(.settingsLicenses)
-    }
-    
-    fileprivate func showRateTheApp() {
-        let url = App.configuration.contact.appStoreReviewURL
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        Tracker.trackEvent(.settingsRateApp)
     }
 }
 
@@ -119,12 +94,7 @@ extension AboutGnosisSafeTableViewController: NavigationRouter {
             presentAfterDelay { [weak self] in
                 self?.showPrivacyPolicy()
             }
-        } else if route.path == NavigationRoute.licenses().path {
-            presentAfterDelay { [weak self] in
-                self?.showLicenses()
-            }
-        }
-    }
+        }    }
     
     // 500 milliseconds was chosen because it is enough time to
     // first dismiss existing controllers, and then show the 'about' screen and

@@ -117,9 +117,6 @@ struct AppConfiguration {
 
         @ConfigurationKey("PRIVACY_URL")
         var privacyURL: URL
-
-        @ConfigurationKey("LICENSES_URL")
-        var licensesURL: URL
     }
 
     struct Contact {
@@ -129,20 +126,17 @@ struct AppConfiguration {
         @ConfigurationKey("TWITTER_URL")
         var twitterURL: URL
 
-        @ConfigurationKey("HELP_CENTER_URL")
-        var helpCenterURL: URL
+        @ConfigurationKey("TELEGRAM_URL")
+        var telegramURL: URL
 
-        @ConfigurationKey("FEATURE_SUGGESTION_URL")
-        var featureSuggestionURL: URL
-
-        @ConfigurationKey("CONTACT_EMAIL")
-        var contactEmail: URL
+        @ConfigurationKey("YOUTUBE_URL")
+        var youtubeURL: URL
+        
+        @ConfigurationKey("INSTAGRAM_URL")
+        var instagramURL: URL
 
         @ConfigurationKey("APP_STORE_REVIEW_URL")
         var appStoreReviewURL: URL
-
-        @ConfigurationKey("FORUM_URL")
-        var forumURL: URL
 
         @ConfigurationKey("SAFE_DAO_URL")
         var safeDAOURL: URL

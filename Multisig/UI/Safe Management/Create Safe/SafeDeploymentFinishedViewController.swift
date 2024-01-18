@@ -58,7 +58,7 @@ class SafeDeploymentFinishedViewController: UIViewController {
 
             titleLabel.text = "Your Safe Account is ready!"
             descriptionLabel.text = "That’s it! Start using your most secure wallet on Ethereum."
-            actionButton.setText("Start using Safe{Wallet}", .filled)
+            actionButton.setText("Start using Harmony Multisig Wallet", .filled)
             linkButton.isHidden = true
 
         case .failure:

@@ -25,11 +25,9 @@ class AssetsViewController: ContainerViewController {
 
         segmentVC.segmentItems = [
             SegmentBarItem(image: UIImage(named: "ico-coins")!, title: "Coins"),
-            SegmentBarItem(image: UIImage(named: "ico-collectibles")!, title: "Collectibles")
         ]
         segmentVC.viewControllers = [
             BalancesViewController(),
-            CollectiblesViewController()
         ]
         segmentVC.selectedIndex = 0
         

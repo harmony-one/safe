@@ -88,6 +88,8 @@
 	<string>$(HELP_CENTER_URL)</string>
 	<key>INFURA_API_KEY</key>
 	<string>$(INFURA_API_KEY)</string>
+	<key>INSTAGRAM_URL</key>
+	<string>$(INSTAGRAM_URL)</string>
 	<key>INTERCOM_API_KEY</key>
 	<string>$(INTERCOM_API_KEY)</string>
 	<key>INTERCOM_APP_ID</key>
@@ -102,8 +104,6 @@
 	<string>$(KEY_SECURITY_URL)</string>
 	<key>LEDGER_PAIRING_URL</key>
 	<string>$(LEDGER_PAIRING_URL)</string>
-	<key>LICENSES_URL</key>
-	<string>$(LICENSES_URL)</string>
 	<key>LOGGERS</key>
 	<string>$(LOGGERS)</string>
 	<key>LOG_LEVEL</key>
@@ -222,6 +222,8 @@
 	</dict>
 	<key>TWITTER_URL</key>
 	<string>$(TWITTER_URL)</string>
+	<key>TELEGRAM_URL</key>
+	<string>$(TELEGRAM_URL)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DMSans-Bold.ttf</string>
@@ -302,5 +304,7 @@
 	<string>$(WEB3AUTH_GOOGLE_VERIFIER_SUB)</string>
 	<key>WEB3AUTH_REDIRECT_SCHEME</key>
 	<string>$(WEB3AUTH_REDIRECT_SCHEME)</string>
+	<key>YOUTUBE_URL</key>
+	<string>$(YOUTUBE_URL)</string>
 </dict>
 </plist>

@@ -28,19 +28,16 @@ class MainTabBarViewController: UITabBarController {
     enum Path {
         static let assets: IndexPath = [0]
         static let balances: IndexPath = assets.appending(0)
-        static let collectibles: IndexPath = assets.appending(1)
 
         static let transactions: IndexPath = [1]
         static let queue: IndexPath = transactions.appending(0)
         static let history: IndexPath = transactions.appending(1)
 
-        static let dapps: IndexPath = [2]
-
-        static let settings: IndexPath = [3]
+        static let settings: IndexPath = [2]
         static let appSettings: IndexPath = settings.appending(0)
         static let safeSettings: IndexPath = settings.appending(1)
 
-        static let count = [assets, transactions, dapps, settings].count
+        static let count = [assets, transactions, settings].count
     }
 
     lazy var balancesTabVC: BalancesUINavigationController = {
@@ -49,10 +46,6 @@ class MainTabBarViewController: UITabBarController {
 
     lazy var transactionsTabVC: UIViewController = {
         transactionsTabViewController()
-    }()
-
-    lazy var dappsTabVC: UIViewController = {
-        dappsTabViewController()
     }()
 
     lazy var settingsTabVC: SettingsUINavigationController = {
@@ -193,25 +186,6 @@ class MainTabBarViewController: UITabBarController {
             tag: Path.transactions[0])
     }
 
-    private func dappsTabViewController() -> UIViewController {
-        let noSafesVC = NoSafesViewController()
-        let loadSafeViewController = LoadSafeViewController()
-        let deploySafeVC = SafeDeployingViewController()
-
-        loadSafeViewController.trackingEvent = .dappsNoSafe
-        noSafesVC.hasSafeViewController = RibbonViewController(rootViewController: DappsViewController())
-        noSafesVC.noSafeViewController = loadSafeViewController
-        noSafesVC.safeDepolyingViewContoller = ViewControllerFactory.ribbonWith(viewController: deploySafeVC)
-
-        let tabRoot = HeaderViewController(rootViewController: noSafesVC)
-        return tabViewController(
-            root: tabRoot,
-            title: "dApps",
-            image: UIImage(named: "tab-icon-dapps")!,
-            tag: Path.dapps[0]
-        )
-    }
-
     private func settingsTabViewController() -> SettingsUINavigationController {
         let noSafesVC = NoSafesViewController()
         let loadSafeViewController = LoadSafeViewController()
@@ -288,7 +262,7 @@ class MainTabBarViewController: UITabBarController {
     }
     
     @objc private func updateTabs() {
-        viewControllers = [balancesTabVC, transactionsTabVC, dappsTabVC, settingsTabVC]        
+        viewControllers = [balancesTabVC, transactionsTabVC, settingsTabVC]
     }
 
     @objc func handleConfirmTransactionNotificationReceived(_ notification: Notification) {
@@ -406,8 +380,6 @@ extension MainTabBarViewController: NavigationRouter {
             return true
         } else if route.path == NavigationRoute.showAssets().path {
             return true
-        } else if route.path == NavigationRoute.showCollectibles().path {
-            return true
         } else if route.path == NavigationRoute.deploymentFailedPath {
             return true
         } else if route.path == NavigationRoute.requestToAddOwnerPath {
@@ -415,8 +387,6 @@ extension MainTabBarViewController: NavigationRouter {
         } else if route.path == NavigationRoute.loadSafe().path {
             return true
         } else if route.path == NavigationRoute.createSafe().path {
-            return true
-        } else if route.path == NavigationRoute.dapps().path {
             return true
         }
 
@@ -466,9 +436,6 @@ extension MainTabBarViewController: NavigationRouter {
         } else if route.path == NavigationRoute.showAssets().path {
             guard selectSafe(from: route) else { return }
             switchTo(indexPath: Path.balances)
-        } else if route.path == NavigationRoute.showCollectibles().path {
-            guard selectSafe(from: route) else { return }
-            switchTo(indexPath: Path.collectibles)
         } else if route.path == NavigationRoute.deploymentFailedPath {
             presentFailedDeployment(safe: route.info["safe"] as! Safe)
         } else if route.path == NavigationRoute.requestToAddOwnerPath {
@@ -499,9 +466,6 @@ extension MainTabBarViewController: NavigationRouter {
             })
             
             present(flow: createSafeFlow)
-        } else if route.path == NavigationRoute.dapps().path {
-            selectSafe(from: route)
-            switchTo(indexPath: Path.dapps)
         }
     }
     

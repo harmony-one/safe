@@ -21,14 +21,13 @@ struct GetInTouchView: View {
     let channels: [CommsChannel] = [
         (contact.discordURL, "ico-discord", "Discord"),
         (contact.twitterURL, "ico-twitter", "Twitter"),
-        (contact.helpCenterURL, "ico-helpCenter", "Help Center"),
-        (contact.featureSuggestionURL, "ico-featureSuggestion", "Feature suggestion")
+        (contact.telegramURL, "ico-telegram", "Telegram"),
+        (contact.youtubeURL, "ico-youtube", "YouTube"),
+        (contact.instagramURL, "ico-instagram", "Instagram"),
     ]
 
     var body: some View {
         List {
-            EmailLink(title: "E-mail", url: Self.contact.contactEmail, iconName: "ico-eMail")
-
             ForEach(channels, id: \.url) { item in
                 BrowserLink(title: item.text, url: item.url, iconName: item.icon)
             }
@@ -36,7 +35,7 @@ struct GetInTouchView: View {
         .onAppear {
             Tracker.trackEvent(.settingsAppSupport)
         }
-        .navigationBarTitle("Help Center", displayMode: .inline)
+        .navigationBarTitle("Links", displayMode: .inline)
     }
 }
 
