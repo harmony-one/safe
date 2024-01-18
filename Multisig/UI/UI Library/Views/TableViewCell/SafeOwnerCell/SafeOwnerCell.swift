@@ -63,6 +63,6 @@ class SafeOwnerCell: UITableViewCell {
     }
 
     private func prependingPrefixString(_ prefixString: String) -> String {
-        AppSettings.prependingChainPrefixToAddresses ? prefixString : ""
+        ""
     }
 }

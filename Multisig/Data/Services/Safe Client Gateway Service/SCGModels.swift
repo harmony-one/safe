@@ -592,7 +592,7 @@ extension SCGModels {
         }
 
         var prefixString: String {
-            AppSettings.prependingChainPrefixToAddresses ? "\(shortName):" : ""
+            ""
         }
 
         func isSupported(feature: String) -> Bool {

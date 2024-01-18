@@ -34,7 +34,6 @@ class AppSettingsViewController: UITableViewController {
             case addressBook(String)
             case passcode(String)
             case fiat(String, String)
-            case chainPrefix(String)
             case appearance(String)
             case experimental(String)
         }
@@ -89,7 +88,6 @@ class AppSettingsViewController: UITableViewController {
             Section.App.ownerKeys("Owner keys", !KeyInfo.keysWithoutBackup().isEmpty, "\(KeyInfo.count())"),
             Section.App.passcode("Security"),
             Section.App.fiat("Fiat currency", AppSettings.selectedFiatCode),
-            Section.App.chainPrefix("Chain prefix"),
             // we do not have experimental features at the moment
             //Section.App.experimental("Experimental")
         ])
@@ -203,9 +201,6 @@ class AppSettingsViewController: UITableViewController {
         case Section.App.fiat(let name, let value):
             return tableView.basicCell(name: name, icon: "ico-app-settings-fiat", detail: value, indexPath: indexPath)
 
-        case Section.App.chainPrefix(let name):
-            return tableView.basicCell(name: name, icon: "ico-app-settings-hash", indexPath: indexPath)
-
         case Section.App.appearance(let name):
             return tableView.basicCell(name: name, icon: "ico-app-settings-moon", indexPath: indexPath)
     
@@ -250,9 +245,6 @@ class AppSettingsViewController: UITableViewController {
         case Section.App.fiat:
             let selectFiatViewController = SelectFiatViewController()
             show(selectFiatViewController, sender: self)
-            
-        case Section.App.chainPrefix:
-            show(ChainSettingsTableViewController(), sender: self)
 
         case Section.App.appearance:
             let appearanceViewController = ChangeDisplayModeTableViewController()

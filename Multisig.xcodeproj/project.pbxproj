@@ -216,7 +216,6 @@
 		04B4B68F25B8857F00CFE24B /* AccountInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4B68E25B8857F00CFE24B /* AccountInfoView.xib */; };
 		04B4B6E525B9A08D00CFE24B /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4B6E325B9A08D00CFE24B /* CardTableViewCell.swift */; };
 		04B4B6E625B9A08D00CFE24B /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B4B6E425B9A08D00CFE24B /* CardTableViewCell.xib */; };
-		04B964412734427D00A21EE9 /* ChainSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B964402734427D00A21EE9 /* ChainSettingsTableViewController.swift */; };
 		04C22B2D2A367FF800F58A15 /* CustomAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04C22B2C2A367FF800F58A15 /* CustomAuth */; };
 		04C22B302A36807500F58A15 /* SafeWeb3 in Frameworks */ = {isa = PBXBuildFile; productRef = 04C22B2F2A36807500F58A15 /* SafeWeb3 */; };
 		04C22B322A36807500F58A15 /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = 04C22B312A36807500F58A15 /* Web3ContractABI */; };
@@ -1287,7 +1286,6 @@
 		04B4B68E25B8857F00CFE24B /* AccountInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountInfoView.xib; sourceTree = "<group>"; };
 		04B4B6E325B9A08D00CFE24B /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		04B4B6E425B9A08D00CFE24B /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
-		04B964402734427D00A21EE9 /* ChainSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainSettingsTableViewController.swift; sourceTree = "<group>"; };
 		04C5DF6926FB451B0072476C /* KeyTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTypeTableViewCell.swift; sourceTree = "<group>"; };
 		04C5DF6A26FB451B0072476C /* KeyTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyTypeTableViewCell.xib; sourceTree = "<group>"; };
 		04C5ED3827878A7F00FF5302 /* EditAdvancedParametersUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAdvancedParametersUITableViewCell.swift; sourceTree = "<group>"; };
@@ -4082,7 +4080,6 @@
 				0A13BD7F2978342100322C66 /* FeatureToggleTableViewController.xib */,
 				049A9DCF26020C0B00CA5723 /* SelectFiatViewController.swift */,
 				0428DB1125CF239A002CF4A9 /* ChangeDisplayModeTableViewController.swift */,
-				04B964402734427D00A21EE9 /* ChainSettingsTableViewController.swift */,
 				D86517722760CA7C000B4C04 /* AboutGnosisSafeTableViewController.swift */,
 				044BEE012988076D00F533B0 /* ChangeLockMethodFlow.swift */,
 			);
@@ -5342,7 +5339,6 @@
 				0438C9212760120D009A0E31 /* DeleteDelegateKeyRequest.swift in Sources */,
 				0A2F1A7B267A5E9E00C09F03 /* GSImageView.swift in Sources */,
 				04248BD9272DF18C00431397 /* NamingPolicy.swift in Sources */,
-				04B964412734427D00A21EE9 /* ChainSettingsTableViewController.swift in Sources */,
 				0ADF9DD228B4E03500D4FBA2 /* Allocation.swift in Sources */,
 				55D3654325078560004D5047 /* TextView.swift in Sources */,
 				0A451C18252DDCDE001DB7D2 /* ProgressIndicatorCell.swift in Sources */,

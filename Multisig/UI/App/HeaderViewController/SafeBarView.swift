@@ -105,7 +105,7 @@ class SafeBarView: UINibView {
     }
 
     private func prefixString() -> String {
-        (AppSettings.prependingChainPrefixToAddresses && prefix != nil ? "\(prefix!):" : "" )
+        ""
     }
 }
 

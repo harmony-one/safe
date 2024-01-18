@@ -175,11 +175,11 @@ class AddressInfoView: UINibView {
     }
 
     private func copyPrefixString() -> String {
-        AppSettings.copyAddressWithChainPrefix ? prefixString() : ""
+        ""
     }
 
     private func prependingPrefixString() -> String {
-        AppSettings.prependingChainPrefixToAddresses ? prefixString() : ""
+        ""
     }
 
     private func prefixString() -> String {

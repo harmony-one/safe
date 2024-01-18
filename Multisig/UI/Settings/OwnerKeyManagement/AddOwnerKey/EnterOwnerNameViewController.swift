@@ -131,7 +131,7 @@ class EnterOwnerNameViewController: UIViewController {
     }
 
     private func prefixString() -> String {
-        (AppSettings.prependingChainPrefixToAddresses && prefix != nil ? "\(prefix!):" : "" )
+        ""
     }
 
     @IBAction func didTapContinue(_ sender: Any) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AddressBookEntry" representedClassName="AddressBookEntry" syncable="YES" codeGenerationType="class">
         <attribute name="additionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="address" optional="YES" attributeType="String"/>
@@ -8,7 +8,6 @@
     </entity>
     <entity name="AppSettings" representedClassName="AppSettings" syncable="YES" codeGenerationType="class">
         <attribute name="appReviewEventCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="copyAddressWithChainPrefix" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="dismissedImportKeyBanner" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="displayMode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="fiatCode" optional="YES" attributeType="String" defaultValueString="USD"/>
@@ -21,7 +20,6 @@
         <attribute name="passcodeBannerDismissed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="passcodeOptions" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="passcodeWasSetAtLeastOnce" optional="YES" attributeType="Boolean" defaultValueString="NO"/>
-        <attribute name="prependingChainPrefixToAddresses" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="securityCenterVersion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="securityLockEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="securityLockMethod" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>

@@ -81,7 +81,7 @@ class EnterAddressNameViewController: UIViewController {
     }
 
     private func prefixString() -> String {
-        (AppSettings.prependingChainPrefixToAddresses && prefix != nil ? "\(prefix!):" : "" )
+        ""
     }
 }
 

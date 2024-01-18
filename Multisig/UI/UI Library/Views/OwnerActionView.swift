@@ -40,7 +40,7 @@ class OwnerActionView: UINibView {
     }
 
     private func prependingPrefixString() -> String {
-        AppSettings.prependingChainPrefixToAddresses ? prefixString() : ""
+        ""
     }
 
     private func prefixString() -> String {

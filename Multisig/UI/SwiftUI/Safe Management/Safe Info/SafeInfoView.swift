@@ -19,7 +19,7 @@ struct SafeInfoView: View {
             if selectedSafe.first == nil {
                 Text("No Safe is selected").body()
             } else {
-                SafeInfoContentView(safe: selectedSafe.first!, appendPrefix: AppSettings.prependingChainPrefixToAddresses)
+                SafeInfoContentView(safe: selectedSafe.first!, appendPrefix: false)
             }
         }
         .background(Color.backgroundSecondary)

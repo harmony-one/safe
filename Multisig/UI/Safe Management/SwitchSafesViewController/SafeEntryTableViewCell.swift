@@ -53,6 +53,6 @@ class SafeEntryTableViewCell: UITableViewCell {
     }
 
     private func prefixString(prefix: String?) -> String {
-        (AppSettings.prependingChainPrefixToAddresses && prefix != nil ? "\(prefix!):" : "" )
+        ""
     }
 }
