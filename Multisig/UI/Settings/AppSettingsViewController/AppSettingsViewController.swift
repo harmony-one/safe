@@ -49,7 +49,6 @@ class AppSettingsViewController: UITableViewController {
         }
 
         enum About: SectionItem {
-            case aboutGnosisSafe(String)
             case appVersion(String, String)
         }
     }
@@ -94,17 +93,13 @@ class AppSettingsViewController: UITableViewController {
             // we do not have experimental features at the moment
             //Section.App.experimental("Experimental")
         ])
-        let supportSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .support("Support"), items: [
-            Section.Support.getSupport("Links")
-        ])
 
         let aboutSection: (section: AppSettingsViewController.Section, items: [SectionItem]) = (section: .about("About"), items: [
-            Section.About.aboutGnosisSafe("About Harmony Multisig Wallet"),
             Section.About.appVersion("App version", "\(app.marketingVersion) (\(app.buildVersion))"),
+            Section.Support.getSupport("Links")
         ])
         sections += [
             appSection,
-            supportSection,
             aboutSection
         ]
     }
@@ -218,7 +213,7 @@ class AppSettingsViewController: UITableViewController {
             return tableView.basicCell(name: name, icon: "ico-app-settings-package", indexPath: indexPath)
             
         case Section.Support.getSupport(let name):
-            return tableView.basicCell(name: name, icon: "ico-app-settings-support", indexPath: indexPath)
+            return tableView.basicCell(name: name,  indexPath: indexPath)
             
         case Section.Advanced.advanced(let name):
             return tableView.basicCell(name: name, indexPath: indexPath)
@@ -226,9 +221,6 @@ class AppSettingsViewController: UITableViewController {
         case Section.Advanced.toggles(let name):
             return tableView.basicCell(name: name, indexPath: indexPath)
 
-        case Section.About.aboutGnosisSafe(let name):
-            return tableView.basicCell(name: name, indexPath: indexPath)
-            
         case Section.About.appVersion(let name, let version):
             return tableView.infoCell(name: name, info: version, indexPath: indexPath)
 
@@ -282,10 +274,6 @@ class AppSettingsViewController: UITableViewController {
             let togglesVC = FeatureToggleTableViewController()
             show(togglesVC, sender: self)
             
-        case Section.About.aboutGnosisSafe:
-            show(AboutGnosisSafeTableViewController(), sender: self)
-            break
-
         default:
             break
         }
