@@ -24,7 +24,6 @@ class SelectAddressViewController: UIAlertController {
 
         addAction(UIAlertAction(title: "Paste from Clipboard", style: .default, handler: handlePaste(_:)))
         addAction(UIAlertAction(title: "Scan QR Code", style: .default, handler: handleScan(_:)))
-        addAction(UIAlertAction(title: "Address Book", style: .default, handler: handleAddressBook(_:)))
         addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     }
 
@@ -46,19 +45,6 @@ class SelectAddressViewController: UIAlertController {
         vc.delegate = self
         vc.setup()
         presenter?.present(vc, animated: true, completion: nil)
-    }
-
-    func handleAddressBook(_ action: UIAlertAction) {
-        let addressBookVC = AddressBookListTableViewController()
-        addressBookVC.filterByChain = chain
-        addressBookVC.isPickerModeEnabled = true
-        addressBookVC.onSelect = { [unowned addressBookVC, unowned self] address in
-            addressBookVC.dismiss(animated: true) { [unowned self] in
-                completion(address)
-            }
-        }
-        let vc = ViewControllerFactory.modal(viewController: addressBookVC)
-        presenter?.present(vc, animated: true)
     }
 
     func validate(text: String?) throws -> Address {

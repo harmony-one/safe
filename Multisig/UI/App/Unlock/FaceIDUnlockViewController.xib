@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,9 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico-logo-safe-wallet" translatesAutoresizingMaskIntoConstraints="NO" id="58c-iK-SXJ">
-                    <rect key="frame" x="98" y="269" width="218" height="114"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D58-Xa-mTf">
                     <rect key="frame" x="16" y="790" width="382" height="56"/>
                     <constraints>
@@ -44,24 +41,26 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Harmony-logo" translatesAutoresizingMaskIntoConstraints="NO" id="wlu-Ry-hDV">
+                    <rect key="frame" x="147" y="295" width="120" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mcg-Cq-EoA" secondAttribute="trailing" constant="32" id="4B2-ev-KDV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="D58-Xa-mTf" secondAttribute="bottom" constant="16" id="LDY-bt-Po3"/>
-                <constraint firstItem="58c-iK-SXJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TrW-z1-dVK"/>
                 <constraint firstItem="D58-Xa-mTf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cFO-hV-V39"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D58-Xa-mTf" secondAttribute="trailing" constant="16" id="foV-Yq-SlG"/>
                 <constraint firstItem="Mcg-Cq-EoA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="gBA-MP-QTQ"/>
-                <constraint firstItem="Mcg-Cq-EoA" firstAttribute="top" secondItem="58c-iK-SXJ" secondAttribute="bottom" constant="40" id="iui-4a-cgR"/>
                 <constraint firstItem="Mcg-Cq-EoA" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="reC-8l-wPF"/>
             </constraints>
             <point key="canvasLocation" x="139" y="70"/>
         </view>
     </objects>
     <resources>
-        <image name="ico-logo-safe-wallet" width="218" height="114"/>
+        <image name="Harmony-logo" width="300" height="300"/>
         <namedColor name="labelPrimary">
             <color red="0.070588235294117646" green="0.074509803921568626" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
