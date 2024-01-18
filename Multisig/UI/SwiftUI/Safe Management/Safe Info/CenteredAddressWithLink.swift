@@ -18,9 +18,9 @@ struct CenteredAddressWithLink: View {
 
     var body: some View {
         HStack {
-            CopyButton(copyPrefixString() + safe.address!) {
+            CopyButton(safe.address!) {
                 let prefix = prependingPrefixString()
-                SlicedText(string: SlicedString(text: prefix + safe.address!, prefix: prefix.count + 6, suffix: 4))
+                SlicedText(string: SlicedString(text: safe.address!, prefix: 6, suffix: 4))
                     .style(.addressLong)
                     .multilineTextAlignment(.center)
             }

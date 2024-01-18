@@ -46,15 +46,15 @@ struct SafeInfoContentView: View {
 
             LoadableENSNameText(safe: safe, showsLoading: false)
 
-            QRView(value: prefixString() + safe.address!)
+            QRView(value: safe.address!)
                 .padding(.top, 12)
 
-            if (AppSettings.prependingChainPrefixToAddresses) {
-                EmptyView().background(Color.icon)
-                Toggle(isOn: $appendPrefix, label: {
-                    Text("QR code with chain prefix").fixedSize().font(.headline)
-                }).padding(.top, 20).toggleStyle(SwitchToggleStyle(tint: Color.success))
-            }
+//            if (AppSettings.prependingChainPrefixToAddresses) {
+//                EmptyView().background(Color.icon)
+//                Toggle(isOn: $appendPrefix, label: {
+//                    Text("QR code with chain prefix").fixedSize().font(.headline)
+//                }).padding(.top, 20).toggleStyle(SwitchToggleStyle(tint: Color.success))
+//            }
         }
         .multilineTextAlignment(.center)
         .onAppear {
@@ -73,7 +73,7 @@ struct SwiftUINetworkIndicator: View {
 
     var body: some View {
         HStack(spacing: 9) {
-            Image(systemName: "circle.fill").resizable().frame(width: 12, height: 12).foregroundColor(color)
+            Image(systemName: "circle.fill").resizable().frame(width: 12, height: 12).foregroundColor(.cyan)
 
             Text(text).font(.subheadline).foregroundColor(.labelPrimary)
         }

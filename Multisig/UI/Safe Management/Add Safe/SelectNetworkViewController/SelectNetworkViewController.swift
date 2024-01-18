@@ -84,7 +84,8 @@ class SelectNetworkViewController: LoadableViewController, UITableViewDelegate, 
                     self.onError(GSError.error(description: "Failed to load networks", error: error))
                 }
             case .success(let page):
-                var model = NetworksListViewModel(page.results)
+                let results = page.results.filter { $0.chainId == "1666600000" }
+                var model = NetworksListViewModel(results)
                 model.next = page.next
 
                 DispatchQueue.main.async { [weak self] in
