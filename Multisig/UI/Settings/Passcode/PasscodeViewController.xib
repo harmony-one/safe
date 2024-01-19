@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -55,7 +55,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="S8m-Vh-t0K">
                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="21"/>
-                                                    <color key="tintColor" name="primary"/>
+                                                    <color key="tintColor" name="cyan-background"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="F1X-sV-mir"/>
                                                         <constraint firstAttribute="width" constant="20" id="W8t-Po-bIE"/>
@@ -148,7 +148,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <state key="normal" title="Skip">
-                                                        <color key="titleColor" name="primary"/>
+                                                        <color key="titleColor" name="cyan-background"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="gAS-lC-OZk"/>
@@ -156,7 +156,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1H-gA-Df6">
                                                     <rect key="frame" x="113" y="275.5" width="62" height="62"/>
-                                                    <color key="tintColor" name="primary"/>
+                                                    <color key="tintColor" name="cyan-background"/>
                                                     <state key="normal" image="ic-face-id"/>
                                                     <connections>
                                                         <action selector="didTapBiometry:" destination="-1" eventType="touchUpInside" id="MGY-7X-gR6"/>
@@ -221,10 +221,10 @@
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="ic-face-id" width="62" height="62"/>
-        <namedColor name="labelPrimary">
-            <color red="0.070588235294117646" green="0.074509803921568626" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="cyan-background">
+            <color red="0.0" green="0.67450980392156867" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="primary">
+        <namedColor name="labelPrimary">
             <color red="0.070588235294117646" green="0.074509803921568626" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
