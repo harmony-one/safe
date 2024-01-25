@@ -44,9 +44,9 @@ class MainTabBarViewController: UITabBarController {
         balancesTabViewController()
     }()
 
-    lazy var transactionsTabVC: UIViewController = {
-        transactionsTabViewController()
-    }()
+//    lazy var transactionsTabVC: UIViewController = {
+//        transactionsTabViewController()
+//    }()
 
     lazy var settingsTabVC: SettingsUINavigationController = {
         settingsTabViewController()
@@ -202,7 +202,7 @@ class MainTabBarViewController: UITabBarController {
         let segmentVC = SegmentViewController(namedClass: nil)
         segmentVC.segmentItems = [
             SegmentBarItem(image: UIImage(named: "ico-app-settings")!, title: "App Settings"),
-            SegmentBarItem(image: UIImage(named: "ico-safe-settings")!, title: "My Safe Account")
+           // SegmentBarItem(image: UIImage(named: "ico-safe-settings")!, title: "My Safe Account")
         ]
         segmentVC.viewControllers = [
             appSettingsVC,
@@ -262,7 +262,9 @@ class MainTabBarViewController: UITabBarController {
     }
     
     @objc private func updateTabs() {
-        viewControllers = [balancesTabVC, transactionsTabVC, settingsTabVC]
+       // viewControllers = [balancesTabVC, transactionsTabVC, settingsTabVC]
+        
+        viewControllers = [balancesTabVC, settingsTabVC]
     }
 
     @objc func handleConfirmTransactionNotificationReceived(_ notification: Notification) {

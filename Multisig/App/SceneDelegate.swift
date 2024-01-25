@@ -305,10 +305,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func onAppUpdateCompletion() {
-        if !AppSettings.termsAccepted {
-            showWindow(makeTermsWindow())
-            // TODO: Enable when implemented new security center
-        } else if shouldShowPasscode && !AppConfiguration.FeatureToggles.securityCenter {
+//        if !AppSettings.termsAccepted {
+//            showWindow(makeTermsWindow())
+//            // TODO: Enable when implemented new security center
+//        } else
+        if shouldShowPasscode && !AppConfiguration.FeatureToggles.securityCenter {
             showWindow(makeEnterPasscodeWindow())
         } else if App.shared.securityCenter.shouldShowFaceID() {
             showWindow(makeFaceIDUnlockWindow())

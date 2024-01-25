@@ -93,6 +93,10 @@ class SelectNetworkViewController: LoadableViewController, UITableViewDelegate, 
                     self.model = model
                     self.onSuccess()
                     self.findPreselectedChainId()
+                    guard let chain = model.models.first else  {
+                        return
+                    }
+                    completion(chain)
                 }
             }
         }

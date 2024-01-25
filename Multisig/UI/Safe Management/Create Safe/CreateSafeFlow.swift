@@ -28,6 +28,8 @@ class CreateSafeFlow: UIFlow, ASAuthorizationControllerPresentationContextProvid
     private var didSubmit = false
     private var loginModel: GoogleWeb3AuthLoginModel!
     private var inputChainId: String?
+    var onClose: () -> Void = {}
+
 
     init(chainId: String? = nil, _ factory: CreateSafeFlowFactory = CreateSafeFlowFactory(), completion: @escaping (_ success: Bool) -> Void) {
         self.factory = factory
@@ -38,17 +40,29 @@ class CreateSafeFlow: UIFlow, ASAuthorizationControllerPresentationContextProvid
     override func start() {
         chooseNetwork()
     }
+    
+   
 
     func chooseNetwork() {
-        let vc = factory.selectNetworkViewController(chainId: inputChainId) { [unowned self] chain in
-            self.chain = Chain.createOrUpdate(chain)
-            instructions()
+//        let vc = factory.selectNetworkViewController(chainId: inputChainId) { [unowned self] chain in
+//            self.chain = Chain.createOrUpdate(chain)
+//            instructions()
+//        }
+//
+//        vc.navigationItem.largeTitleDisplayMode = .always
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//
+//        show(vc)
+        
+        
+        let createSafeVC = CreateSafeViewController()
+         createSafeVC.onClose = onClose
+        if let chain = chain {
+            createSafeVC.chain = chain
         }
-
-        vc.navigationItem.largeTitleDisplayMode = .always
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        show(vc)
+        
+       show(createSafeVC)
+    
     }
 
     func instructions() {
@@ -254,6 +268,7 @@ class CreateSafeFlow: UIFlow, ASAuthorizationControllerPresentationContextProvid
 }
 
 class CreateSafeFlowFactory {
+    
     func selectNetworkViewController(chainId: String? = nil, completion: @escaping (_ chain: SCGModels.Chain) -> Void) -> SelectNetworkViewController {
         let vc = SelectNetworkViewController()
         vc.preselectedChainId = chainId

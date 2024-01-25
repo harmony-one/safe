@@ -284,19 +284,19 @@ extension Chain {
     }
 
     static func mainnetChain() -> Chain {
-        try! Chain.by(ChainID.ethereumMainnet) ?? Chain.create(
-            chainId: ChainID.ethereumMainnet,
-            chainName: "Mainnet",
-            rpcUrl: URL(string: "https://mainnet.infura.io/v3/")!,
+        try! Chain.by(ChainID.harmony) ?? Chain.create(
+            chainId: ChainID.harmony,
+            chainName: "Harmony",
+            rpcUrl: URL(string: "https://api.harmony.one")!,
             rpcUrlAuthentication: SCGModels.RpcAuthentication.Authentication.apiKeyPath.rawValue,
-            blockExplorerUrlAddress: "https://etherscan.io/address/{{address}}",
-            blockExplorerUrlTxHash: "https://etherscan.io/tx/{{txHash}}",
+            blockExplorerUrlAddress: "https://explorer.harmony.one/address/{{address}}",
+            blockExplorerUrlTxHash: "https://explorer.harmony.one/tx/{{txHash}}",
             ensRegistryAddress: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
-            shortName: "eth",
-            currencyName: "Ether",
-            currencySymbl: "ETH",
+            shortName: "hmy",
+            currencyName: "ONE",
+            currencySymbl: "hmy",
             currencyDecimals: 18,
-            currencyLogo: URL(string: "https://gnosis-safe-token-logos.s3.amazonaws.com/ethereum-eth-logo.png")!,
+            currencyLogo: URL(string: "https://staging-safe-harmony-static-assets-us-east-1.s3.amazonaws.com/chains/1666600000/currency_logo.png")!,
             themeTextColor: "#001428",
             themeBackgroundColor: "#E8E7E6")
     }

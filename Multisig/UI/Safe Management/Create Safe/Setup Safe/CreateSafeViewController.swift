@@ -89,6 +89,8 @@ class CreateSafeViewController: UIViewController, UITableViewDelegate, UITableVi
 
         uiModel.chain = chain
         updateUI(model: uiModel)
+        uiModel.didEdit()
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -110,7 +112,9 @@ class CreateSafeViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - UI Events
 
     override func closeModal() {
-        onClose()
+     //   onClose()
+        dismiss(animated: true, completion: nil)
+
     }
 
     @IBAction func didTapCreateButton(_ sender: Any) {
@@ -224,7 +228,8 @@ class CreateSafeViewController: UIViewController, UITableViewDelegate, UITableVi
         case .name:
             changeName()
         case .network:
-            selectNetwork()
+          //  selectNetwork()
+            break
 
         case .owners:
             selectOwnerRow(tableView: tableView, indexPath: indexPath)
