@@ -217,7 +217,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         snackbarViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         updateAppWindow = makeUpdateAppWindow()
-        tabBarWindow = makeTabBarWindow()
+        tabBarWindow = makeVCWindow()
         privacyShieldWindow = makePrivacyShieldWindow()
     }
 
@@ -382,6 +382,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             })
         }
     }
+    
+
+    
+    func makeVCWindow() -> UIWindow {
+        let tabBarWindow = makeWindow(scene: scene!)
+        tabBarWindow.rootViewController = MainTabBarViewController().balancesTabViewController()
+        return tabBarWindow
+    }
+
 }
 
 extension SceneDelegate: NavigationRouter {

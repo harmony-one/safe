@@ -97,6 +97,8 @@ enum ViewControllerFactory {
     static func ribbonWith(viewController: UIViewController) -> RibbonViewController {
         RibbonViewController(rootViewController: viewController)
     }
+    
+    
 
     static func addCloseButton(_ vc: UIViewController) {
         vc.navigationItem.leftBarButtonItem =

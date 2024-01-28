@@ -59,7 +59,7 @@ class MainTabBarViewController: UITabBarController {
         tabBar.barTintColor = .backgroundSecondary
         tabBar.backgroundColor = .backgroundSecondary
 
-        updateTabs()
+     //   updateTabs()
 
         let notificationCenter = NotificationCenter.default
 
@@ -124,7 +124,7 @@ class MainTabBarViewController: UITabBarController {
         presentDelayedControllers()
     }
 
-    private func balancesTabViewController() -> BalancesUINavigationController {
+     func balancesTabViewController() -> BalancesUINavigationController {
         
         let assetsVC = AssetsViewController()
 
@@ -226,8 +226,8 @@ class MainTabBarViewController: UITabBarController {
 
     private func balancesTabViewController(root: UIViewController, title: String, image: UIImage, tag: Int) -> BalancesUINavigationController {
         let nav = BalancesUINavigationController(rootViewController: root)
-        let tabItem = UITabBarItem(title: title, image: image, tag: tag)
-        nav.tabBarItem = tabItem
+//        let tabItem = UITabBarItem(title: title, image: image, tag: tag)
+//        nav.tabBarItem = tabItem
         return nav
     }
 
@@ -262,8 +262,6 @@ class MainTabBarViewController: UITabBarController {
     }
     
     @objc private func updateTabs() {
-       // viewControllers = [balancesTabVC, transactionsTabVC, settingsTabVC]
-        
         viewControllers = [balancesTabVC, settingsTabVC]
     }
 
