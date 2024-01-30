@@ -24,7 +24,9 @@ class AssetsViewController: ContainerViewController {
         super.viewDidLoad()
 
         segmentVC.segmentItems = [
-            SegmentBarItem(image: UIImage(named: "ico-coins")!, title: ""),
+//            SegmentBarItem(image: UIImage(named: "")!, title: ""),
+            SegmentBarItem(image: nil, title: ""),
+
         ]
         segmentVC.viewControllers = [
             BalancesViewController(),
