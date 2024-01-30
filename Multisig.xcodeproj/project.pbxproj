@@ -2083,6 +2083,8 @@
 		B3C4D2D82AAF596D0026A8BC /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		B93ACC342B4EF4C3007436AB /* MultisigDebug.Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MultisigDebug.Development.entitlements; sourceTree = "<group>"; };
 		B93ACC372B5013FF007436AB /* NotificationServiceExtensionDebug.Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationServiceExtensionDebug.Development.entitlements; sourceTree = "<group>"; };
+		B9FC2DB92B6919E9008915F5 /* MultisigDebug.Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MultisigDebug.Production.entitlements; sourceTree = "<group>"; };
+		B9FC2DBA2B691A53008915F5 /* NotificationServiceExtensionRelease.Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationServiceExtensionRelease.Production.entitlements; sourceTree = "<group>"; };
 		D80B5A022769CEAD00D6E024 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		D80B5A042769CF1B00D6E024 /* TooltipSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipSource.swift; sourceTree = "<group>"; };
 		D80B5A062769D05D00D6E024 /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
@@ -3339,6 +3341,7 @@
 		0A93DD552445CC8A00688050 /* Multisig */ = {
 			isa = PBXGroup;
 			children = (
+				B9FC2DB92B6919E9008915F5 /* MultisigDebug.Production.entitlements */,
 				B93ACC342B4EF4C3007436AB /* MultisigDebug.Development.entitlements */,
 				55AF4CF226C15261006DA1CC /* Multisig_DEV.entitlements */,
 				55AF4CF326C15261006DA1CC /* Multisig_PROD.entitlements */,
@@ -3658,6 +3661,7 @@
 		0AF2731424DAABDC007E4012 /* NotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B9FC2DBA2B691A53008915F5 /* NotificationServiceExtensionRelease.Production.entitlements */,
 				B93ACC372B5013FF007436AB /* NotificationServiceExtensionDebug.Development.entitlements */,
 				55AF4CF526C15361006DA1CC /* NotificationServiceExtension_DEV.entitlements */,
 				55AF4CF726C15361006DA1CC /* NotificationServiceExtension_PROD.entitlements */,
@@ -6187,7 +6191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Multisig/$(CODE_SIGN_ENTITLEMENTS)";
+				CODE_SIGN_ENTITLEMENTS = Multisig/MultisigDebug.Production.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
@@ -6201,7 +6205,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.dev;
 				PRODUCT_MODULE_NAME = Multisig;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -6228,7 +6232,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.dev;
 				PRODUCT_MODULE_NAME = Multisig;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -6645,7 +6649,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod.NotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.dev.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6839,7 +6843,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "NotificationServiceExtension/$(CODE_SIGN_ENTITLEMENTS)";
+				CODE_SIGN_ENTITLEMENTS = NotificationServiceExtension/NotificationServiceExtensionRelease.Production.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
@@ -6863,7 +6867,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.prod.NotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = harmony.one.safe.dev.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

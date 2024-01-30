@@ -309,13 +309,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            showWindow(makeTermsWindow())
 //            // TODO: Enable when implemented new security center
 //        } else
-        if shouldShowPasscode && !AppConfiguration.FeatureToggles.securityCenter {
-            showWindow(makeEnterPasscodeWindow())
-        } else if App.shared.securityCenter.shouldShowFaceID() {
-            showWindow(makeFaceIDUnlockWindow())
-        } else if App.shared.securityCenter.shouldShowPasscode() {
-            showWindow(makeEnterPasscodeWindow())
-        } else if !AppSettings.onboardingCompleted {
+//        if shouldShowPasscode && !AppConfiguration.FeatureToggles.securityCenter {
+//            showWindow(makeEnterPasscodeWindow())
+//        } else if App.shared.securityCenter.shouldShowFaceID() {
+//            showWindow(makeFaceIDUnlockWindow())
+//        } else if App.shared.securityCenter.shouldShowPasscode() {
+//            showWindow(makeEnterPasscodeWindow())
+//        } else
+        if !AppSettings.onboardingCompleted {
             showOnboardingWindow()
         } else {
             showMainContentWindow()

@@ -40,7 +40,7 @@ _CLIENT_GATEWAY_URL_STAGING    = https:/$()/safe-client.staging.5afe.dev/
 _CLIENT_GATEWAY_URL_PROD       = https:/$()/safe-client.safe.global/
 
 // Apps
-_APP_GROUP_ID_PROD     = group.harmony.one.safe.prod
+_APP_GROUP_ID_PROD     = group.harmony.one.safe.dev
 _APP_GROUP_ID_STAGING  = group.harmony.one.safe.staging
 _APP_GROUP_ID_DEV      = group.harmony.one.safe.dev
 
@@ -61,7 +61,7 @@ GELATO_SERVICE_URL            = https:/$()/relay.gelato.digital
 MOONPAY_SERVICE_URL           = https:/$()/api.moonpay.com
 
 // App Groups
-_APP_GROUP_ID_PROD     = group.harmony.one.safe.prod
+_APP_GROUP_ID_PROD     = group.harmony.one.safe.dev
 _APP_GROUP_ID_STAGING  = group.harmony.one.safe.staging
 _APP_GROUP_ID_DEV      = group.harmony.one.safe.dev
 

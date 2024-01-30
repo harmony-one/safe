@@ -122,10 +122,13 @@ final class HeaderViewController: ContainerViewController {
     }
 
     @objc private func didTapSafeBarView(_ sender: Any) {
-        let vc = SafeInfoViewController(nibName: nil, bundle: nil)
-        vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true, completion: nil)
+//        let vc = SafeInfoViewController(nibName: nil, bundle: nil)
+//        vc.modalPresentationStyle = .overFullScreen
+//        vc.modalTransitionStyle = .crossDissolve
+//        present(vc, animated: true, completion: nil)
+        
+        Pasteboard.string = safeBarView.address.description
+        App.shared.snackbar.show(message: "Copied to clipboard", duration: 2)
     }
 
     @objc private func didReceiveUpdateNotification(_ notification: Notification) {
@@ -140,7 +143,7 @@ final class HeaderViewController: ContainerViewController {
             let selectedSafe = try Safe.getSelected()
             let hasSafe = selectedSafe != nil
             safeBarView.isHidden = !hasSafe
-            switchSafeButton.isHidden = !hasSafe
+          //  switchSafeButton.isHidden = !hasSafe
             noSafeBarView.isHidden = hasSafe
 
             if let safe = selectedSafe {

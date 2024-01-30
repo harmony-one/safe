@@ -196,6 +196,8 @@
 	<string>$(SERVICE_ENV)</string>
 	<key>SOCIAL_LOGIN_INFO_URL</key>
 	<string>$(SOCIAL_LOGIN_INFO_URL)</string>
+	<key>TELEGRAM_URL</key>
+	<string>$(TELEGRAM_URL)</string>
 	<key>TERMS_URL</key>
 	<string>$(TERMS_URL)</string>
 	<key>TSKConfiguration</key>
@@ -222,8 +224,6 @@
 	</dict>
 	<key>TWITTER_URL</key>
 	<string>$(TWITTER_URL)</string>
-	<key>TELEGRAM_URL</key>
-	<string>$(TELEGRAM_URL)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DMSans-Bold.ttf</string>

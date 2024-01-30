@@ -13,7 +13,7 @@
 SERVICE_ENV = STAGING
 
 // Bundle Identifier
-_APP_BUNDLE_ID_PROD     = io.gnosis.multisig.prod.mainnet.NotificationServiceExtension
+_APP_BUNDLE_ID_PROD     = harmony.one.safe.dev.NotificationServiceExtension
 _APP_BUNDLE_ID_STAGING  = io.gnosis.multisig.staging.mainnet.NotificationServiceExtension
 _APP_BUNDLE_ID_DEV      = io.gnosis.multisig.dev.mainnet.NotificationServiceExtension
 
@@ -21,7 +21,7 @@ _APP_BUNDLE_ID_DEV      = io.gnosis.multisig.dev.mainnet.NotificationServiceExte
 PRODUCT_BUNDLE_IDENTIFIER           = $(_APP_BUNDLE_ID_$(SERVICE_ENV):default=$(_APP_BUNDLE_ID_PROD))
 
 // App Groups
-_APP_GROUP_ID_PROD     = group.harmony.one.safe.prod
+_APP_GROUP_ID_PROD     = group.harmony.one.safe.dev
 _APP_GROUP_ID_STAGING  = group.harmony.one.safe.staging
 _APP_GROUP_ID_DEV      = group.harmony.one.safe.dev
 
