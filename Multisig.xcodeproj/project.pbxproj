@@ -6194,7 +6194,7 @@
 				CODE_SIGN_ENTITLEMENTS = Multisig/MultisigDebug.Production.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
@@ -6221,7 +6221,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Multisig/$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
@@ -6396,7 +6396,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Multisig/$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
@@ -6523,7 +6523,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Multisig/$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
@@ -7083,7 +7083,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Multisig/$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
@@ -7214,7 +7214,7 @@
 				CODE_SIGN_ENTITLEMENTS = Multisig/MultisigDebug.Development.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Multisig/Preview Content\"";
 				DEVELOPMENT_TEAM = 5WAH566W3B;
 				ENABLE_PREVIEWS = YES;
@@ -7291,7 +7291,7 @@
 				0AF7F770247FC50400527014 /* Release.Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug.Development;
+			defaultConfigurationName = Release.Production;
 		};
 		0A93DD752445CC8C00688050 /* Build configuration list for PBXNativeTarget "Multisig" */ = {
 			isa = XCConfigurationList;
@@ -7304,7 +7304,7 @@
 				0AF7F771247FC50400527014 /* Release.Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug.Development;
+			defaultConfigurationName = Release.Production;
 		};
 		0A93DD782445CC8C00688050 /* Build configuration list for PBXNativeTarget "MultisigTests" */ = {
 			isa = XCConfigurationList;
@@ -7317,7 +7317,7 @@
 				0AF7F772247FC50400527014 /* Release.Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug.Development;
+			defaultConfigurationName = Release.Production;
 		};
 		0A9BC35A2460581500EB9C5D /* Build configuration list for PBXNativeTarget "MultisigIntegrationTests" */ = {
 			isa = XCConfigurationList;
@@ -7330,7 +7330,7 @@
 				0AF7F773247FC50400527014 /* Release.Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug.Development;
+			defaultConfigurationName = Release.Production;
 		};
 		0AF2731B24DAABDC007E4012 /* Build configuration list for PBXNativeTarget "NotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
@@ -7343,7 +7343,7 @@
 				0AF2732724DAABDC007E4012 /* Release.Development */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug.Development;
+			defaultConfigurationName = Release.Production;
 		};
 /* End XCConfigurationList section */
 

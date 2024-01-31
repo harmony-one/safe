@@ -128,18 +128,20 @@ class MainTabBarViewController: UITabBarController {
         
         let assetsVC = AssetsViewController()
 
-        let noSafesVC = NoSafesViewController()
-        let loadSafeViewController = LoadSafeViewController()
-        loadSafeViewController.trackingEvent = .assetsNoSafe
+//        let noSafesVC = NoSafesViewController()
+//        let loadSafeViewController = LoadSafeViewController()
+     //   loadSafeViewController.trackingEvent = .assetsNoSafe
 
-        let deploySafeVC = SafeDeployingViewController()
-
-        let ribbonVC = RibbonViewController(rootViewController: assetsVC)
-        noSafesVC.hasSafeViewController = ribbonVC
-        noSafesVC.noSafeViewController = loadSafeViewController
-
-        noSafesVC.safeDepolyingViewContoller = ViewControllerFactory.ribbonWith(viewController: deploySafeVC)
-        let tabRoot = HeaderViewController(rootViewController: noSafesVC)
+//        let deploySafeVC = SafeDeployingViewController()
+//
+//        let ribbonVC = RibbonViewController(rootViewController: assetsVC)
+//        noSafesVC.hasSafeViewController = ribbonVC
+//        noSafesVC.noSafeViewController = loadSafeViewController
+//
+//        noSafesVC.safeDepolyingViewContoller = ViewControllerFactory.ribbonWith(viewController: deploySafeVC)
+//         
+//         
+        let tabRoot = HeaderViewController(rootViewController: assetsVC)
         let balances = balancesTabViewController(
             root: tabRoot,
             title: "Assets",

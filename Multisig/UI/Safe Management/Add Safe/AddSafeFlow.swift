@@ -53,7 +53,7 @@ class AddSafeFlow: UIFlow {
             guard let self = self else { return }
             self.name = name
             self.saveData()
-            self.setupPasscode()
+           // self.setupPasscode()
         }
         show(vc)
     }

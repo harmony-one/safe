@@ -29,6 +29,19 @@ final class HeaderViewController: ContainerViewController {
     private var addSafeFlow: AddSafeFlow!
     private var claimTokenFlow: ClaimSafeTokenFlow!
     private var createSafeFlow: CreateSafeFlow!
+    
+    var gatewayService = App.shared.clientGatewayService
+    var completion: (_ address: Address, _ safeVersion: String) -> Void = { _, _ in }
+    var chain: SCGModels.Chain!
+    var preselectedAddress: String?
+    private var loadSafeTask: URLSessionTask?
+    
+    private var loadFirstPageDataTask: URLSessionTask?
+    private var loadNextPageDataTask: URLSessionTask?
+
+    private var model = NetworksListViewModel()
+    var completions: (SCGModels.Chain) -> Void = { _ in }
+
 
     convenience init(rootViewController: UIViewController) {
         self.init(namedClass: nil)
@@ -55,6 +68,103 @@ final class HeaderViewController: ContainerViewController {
         headerBarHeightConstraint.constant = ScreenMetrics.safeHeaderHeight
         reloadSafeData()
     }
+    
+    func loadHarmony() {
+        loadFirstPageDataTask?.cancel()
+        loadNextPageDataTask?.cancel()
+        
+        loadFirstPageDataTask = clientGatewayService.asyncChains { [weak self] result in
+            guard let `self` = self else { return }
+            switch result {
+            case .failure(let error):
+                DispatchQueue.main.async { [weak self] in
+                    guard let `self` = self else { return }
+                    // ignore cancellation error due to cancelling the
+                    // currently running task. Otherwise user will see
+                    // meaningless message.
+                    if (error as NSError).code == URLError.cancelled.rawValue &&
+                        (error as NSError).domain == NSURLErrorDomain {
+                        return
+                    }
+                    self.onError(GSError.error(description: "Failed to load networks", error: error))
+                }
+            case .success(let page):
+                let results = page.results.filter { $0.chainId == "1666600000" }
+                var model = NetworksListViewModel(results)
+                model.next = page.next
+                
+                DispatchQueue.main.async { [weak self] in
+                    guard let `self` = self else { return }
+                    self.model = model
+                    guard let chain = model.models.first else  {
+                        return
+                    }
+                    do {
+                        // (1) validate that the text is address
+                        let address = try Address.addressWithPrefix(text: "0x372ECCF90a7c0BF658c398738f0695D85CdaC1ea")
+                        guard (address.prefix ?? chain.shortName) == chain.shortName else {
+                            // addressField.setError(GSError.AddressMismatchNetwork())
+                            return
+                        }
+                        // (2) and that there's no such safe already
+                        let exists = Safe.exists(address.checksummed, chainId: chain.id)
+                        if exists { throw GSError.SafeAlreadyExists() }
+                        
+                        loadSafeTask = gatewayService.asyncSafeInfo(safeAddress: address,
+                                                                    chainId: chain.id,
+                                                                    completion: { [weak self] result in
+                            switch result {
+                            case .failure(let error):
+                                DispatchQueue.main.async { [weak self] in
+                                    guard let `self` = self else { return }
+                                    if (error as NSError).code == URLError.cancelled.rawValue &&
+                                        (error as NSError).domain == NSURLErrorDomain {
+                                        return
+                                    } else if error is GSError.EntityNotFound {
+                                        
+                                        App.shared.snackbar.show(
+                                            error: GSError.error(description: "Can’t use this address", error: error))
+                                    } else {
+                                        App.shared.snackbar.show(
+                                            error: GSError.error(description: "Can’t use this address", error: error))
+                                    }
+                                }
+                            case .success(let info):
+                                DispatchQueue.main.async { [weak self] in
+                                    guard let `self` = self else { return }
+                                    // (4) and its mastercopy is supported
+                                    guard App.shared.gnosisSafe.isSupported(info.version) else {
+                                        App.shared.snackbar.show(
+                                            error: GSError.error(description: "Can’t use this address", error: GSError.UnsupportedImplementationCopy()))
+                                        return
+                                    }
+                                    self.addSafe(address: address, chain: chain, safeVersion: info.version)
+                                    reloadSafeData()
+                                }
+                            }
+                        })
+                    } catch {
+                        App.shared.snackbar.show(
+                            error: GSError.error(description: "Can’t use this address", error: error))
+                    }
+                }
+            }
+        }
+    }
+    
+    func addSafe(address: Address, chain: SCGModels.Chain, safeVersion: String) {
+        let coreDataChain = Chain.createOrUpdate(chain)
+        Safe.create(
+            address: address.checksummed,
+            version: safeVersion,
+            name: "h.country",
+            chain: coreDataChain)
+        App.shared.notificationHandler.safeAdded(address: address)
+    }
+    
+    func onError(_ error: DetailedLocalizedError) {
+       App.shared.snackbar.show(error: error)
+   }
 
     private func addObservers() {
         let updateNotifications: [NSNotification.Name] = [
@@ -172,7 +282,11 @@ final class HeaderViewController: ContainerViewController {
     @objc private func reloadSafeData() {
         currentDataTask?.cancel()
         do {
-            guard let safe = try Safe.getSelected() else { return }
+            guard let safe = try Safe.getSelected() else {
+                loadHarmony()
+                return
+                
+            }
 
             safeBarView.set(safeTokenClaimable: ClaimingAppController.isAvailable(chain: safe.chain!))
 
