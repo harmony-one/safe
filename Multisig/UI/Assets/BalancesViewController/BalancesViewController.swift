@@ -163,7 +163,7 @@ class BalancesViewController: LoadableViewController, UITableViewDelegate, UITab
                     }
                 case .success(let summary):
                     DispatchQueue.main.async { [weak self] in
-                        let results = summary.items.map { TokenBalance($0, code: AppSettings.selectedFiatCode) }
+                        let results = summary.items.map { TokenBalance($0, code: AppSettings.selectedFiatCode)}
                         let total = TokenBalance.displayCurrency(from: summary.fiatTotal, code: AppSettings.selectedFiatCode)
                         guard let `self` = self else { return }
                         
@@ -174,7 +174,9 @@ class BalancesViewController: LoadableViewController, UITableViewDelegate, UITab
                             object: self,
                             userInfo: ["balances": results, "total": total]
                         )
-                        self.sections = self.makeSections(items: results)
+                        
+                        var filterResults = Array(results.prefix(1))
+                        self.sections = self.makeSections(items: filterResults)
                         self.onSuccess()
                     }
                 }
@@ -241,7 +243,7 @@ class BalancesViewController: LoadableViewController, UITableViewDelegate, UITab
         case .balances(items: let items):
             do {
                 let item = items[indexPath.row]
-                guard let safe = try Safe.getSelected(), item.address != TokenBalance.nativeTokenAddress else { return }
+                guard let safe = try Safe.getSelected() else { return }
                 openInSafari(safe.chain!.browserURL(address: item.address))
             } catch {
                 App.shared.snackbar.show(

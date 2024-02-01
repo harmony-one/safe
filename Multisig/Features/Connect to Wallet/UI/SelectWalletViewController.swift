@@ -142,6 +142,8 @@ extension SelectWalletViewController: UITableViewDelegate, UITableViewDataSource
         connect(to: nil)
     }
 
+    
+    
     func connect(to wallet: WCAppRegistryEntry?) {
         cancelExistingConnection()
         let chain = Selection.current().safe?.chain ?? Chain.mainnetChain()

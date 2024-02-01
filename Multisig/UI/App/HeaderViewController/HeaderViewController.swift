@@ -258,7 +258,7 @@ final class HeaderViewController: ContainerViewController {
 
             if let safe = selectedSafe {
                 safeBarView.setName(safe.displayName)
-                safeBarView.setReadOnly(safe.isReadOnly)
+             //   safeBarView.setReadOnly(safe.isReadOnly)
 
                 switch safe.safeStatus {
                 case .deployed:

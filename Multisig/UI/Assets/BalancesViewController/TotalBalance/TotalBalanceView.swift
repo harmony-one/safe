@@ -49,6 +49,19 @@ class TotalBalanceView: UINibView {
         }
     }
     
+    var sendHidden: Bool = false {
+        didSet {
+            sendButton.isHidden = sendHidden
+        }
+    }
+    
+    var receivedHidden: Bool = false {
+        didSet {
+            receiveButton.isHidden = receivedHidden
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         amountLabel.skeletonTextLineHeight = .relativeToConstraints

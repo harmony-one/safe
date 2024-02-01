@@ -20,6 +20,15 @@ class AssetsViewController: ContainerViewController {
 
     private var relayOnboardingFlow: RelayOnboardingFlow? = nil
 
+    @IBOutlet weak var connectMetaMask: UIButton!
+    
+    private let walletsSource = WCRegistryController()
+    private var wallets: [WCAppRegistryEntry] = []
+
+    var sections: [ConnectWalletSection] = []
+    private var connection: WebConnection?
+    private var completion: (_ wallet: WCAppRegistryEntry?, _ connection: WebConnection) -> Void = { _, _ in }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -137,8 +146,41 @@ class AssetsViewController: ContainerViewController {
         safe = try? Safe.getSelected()
 
         updateSafeOptions()
-    }
+        
+        totalBalanceView.sendHidden = safe?.isReadOnly ?? false
+        totalBalanceView.receivedHidden = safe?.isReadOnly ?? false
+        totalBalanceView.amountLabel.isHidden = true
 
+    }
+    @IBAction func connectMetaMaskAction(_ sender: Any) {
+        
+        wallets = walletsSource.wallets().filter { $0.name == "MetaMask" }
+        
+        self.connect(to: wallets.first)
+    
+
+    }
+    
+    func cancelExistingConnection() {
+        guard let connection = connection else {
+            return
+        }
+        WebConnectionController.shared.userDidCancel(connection)
+    }
+    
+    func connect(to wallet: WCAppRegistryEntry?) {
+        cancelExistingConnection()
+        let chain = Selection.current().safe?.chain ?? Chain.mainnetChain()
+        let walletConnectionVC = StartWalletConnectionViewController(wallet: wallet, chain: chain)
+        walletConnectionVC.onSuccess = { [weak self] connection in
+            var connectedWallet = wallet
+            self?.connection = connection
+            self?.completion(wallet, connection)
+        }
+        let vc = ViewControllerFactory.pageSheet(viewController: walletConnectionVC, halfScreen: wallet != nil)
+        present(vc, animated: true)
+    }
+    
     private var shouldShowRelayBanner: Bool {
         relayBannerWasShown != true && (safe?.chain?.isSupported(feature: .relayingMobile) ?? false)
     }
@@ -176,7 +218,10 @@ class AssetsViewController: ContainerViewController {
         let userInfo = notification.userInfo
         totalBalanceView.amount = userInfo?["total"] as? String
         self.balances = userInfo?["balances"] as? [TokenBalance]
-        totalBalanceView.sendEnabled = !(balances?.isEmpty ?? true)
+       // totalBalanceView.sendEnabled = !(balances?.isEmpty ?? true)
+        totalBalanceView.sendHidden = safe?.isReadOnly ?? false
+        totalBalanceView.receivedHidden = safe?.isReadOnly ?? false
+
     }
     
     @objc private func selectedSafeUpdatedReceived(notification: Notification) {
@@ -193,6 +238,8 @@ class AssetsViewController: ContainerViewController {
         totalBalanceView.tokenBanner.isHidden = !shouldShowSafeTokenBanner
         totalBalanceView.relayInfoBanner.isHidden = !shouldShowRelayBanner
         totalBalanceView.buyEnabled = safe?.chain?.isSupported(feature: .moonpay) ?? false
+        totalBalanceView.sendHidden = safe?.isReadOnly ?? false
+        totalBalanceView.receivedHidden = safe?.isReadOnly ?? false
     }
     
     @objc private func selectionChanged(notification: Notification) {

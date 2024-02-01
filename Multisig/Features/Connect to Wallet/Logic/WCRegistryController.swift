@@ -18,15 +18,15 @@ class WCRegistryController {
     // using wallet ids for keeping ranked order is hard to maintain
     // thus using wallet names
     static let popularWallets = [
-        "Rainbow",
-        "Trust Wallet",
-        "Argent",
-        "MetaMask",
-        "Crypto.com | DeFi Wallet",
-        "Pillar",
-        "imToken",
-        "ONTO",
-        "TokenPocket"
+//        "Rainbow",
+//        "Trust Wallet",
+//        "Argent",
+        "MetaMask"
+//        "Crypto.com | DeFi Wallet",
+//        "Pillar",
+//        "imToken",
+//        "ONTO",
+//        "TokenPocket"
     ]
 
     static let excludedWallets = [
@@ -39,6 +39,8 @@ class WCRegistryController {
     weak var delegate: WCRegistryControllerDelegate?
 
     var repository = WCAppRegistryRepository()
+    
+    //
 
     func loadData() {
         _ = App.shared.walletConnectRegistryService.asyncWallets { [weak self] result in
