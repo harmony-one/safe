@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-jp-SQ9">
-                    <rect key="frame" x="0.0" y="48" width="414" height="210"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="200"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaT-py-F36" customClass="TotalBalanceView" customModule="Multisig" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -33,26 +33,40 @@
                                 <constraint firstAttribute="height" constant="150" placeholder="YES" id="cX1-Ag-6xP"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EG9-Ty-gBh">
-                            <rect key="frame" x="0.0" y="150" width="414" height="60"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EG9-Ty-gBh">
+                            <rect key="frame" x="0.0" y="150" width="414" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2Z-ep-k0I">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g02-bn-RBk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2Z-ep-k0I">
+                                            <rect key="frame" x="109" y="1.5" width="196" height="47"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="gray" image="metamask-seeklogo"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="connectMetaMaskAction:" destination="-1" eventType="touchUpInside" id="DKJ-6O-T6Y"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="ido-7K-M02"/>
+                                        <constraint firstAttribute="height" constant="50" id="KUf-vS-5XI"/>
+                                        <constraint firstItem="O2Z-ep-k0I" firstAttribute="centerX" secondItem="g02-bn-RBk" secondAttribute="centerX" id="SOb-Vb-lY4"/>
+                                        <constraint firstItem="O2Z-ep-k0I" firstAttribute="centerY" secondItem="g02-bn-RBk" secondAttribute="centerY" id="sRQ-W9-sq5"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="metamask1" title="  MetaMask"/>
-                                    <connections>
-                                        <action selector="connectMetaMaskAction:" destination="-1" eventType="touchUpInside" id="DKJ-6O-T6Y"/>
-                                    </connections>
-                                </button>
+                                </view>
                             </subviews>
                         </stackView>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwx-DX-oEe">
-                    <rect key="frame" x="0.0" y="258" width="414" height="604"/>
+                    <rect key="frame" x="0.0" y="248" width="414" height="614"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -71,7 +85,7 @@
         </view>
     </objects>
     <resources>
-        <image name="metamask1" width="55" height="50"/>
+        <image name="metamask-seeklogo" width="172" height="33"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

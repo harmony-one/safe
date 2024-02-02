@@ -12,7 +12,7 @@ import UIKit
 class BalancesViewController: LoadableViewController, UITableViewDelegate, UITableViewDataSource {
 
     private enum Section {
-        case importKeyBanner
+      //  case importKeyBanner
         case passcodeBanner
         case balances(items: [TokenBalance])
     }
@@ -191,9 +191,10 @@ class BalancesViewController: LoadableViewController, UITableViewDelegate, UITab
 
         var sections = [Section]()
 
-        if shouldShowImportKeyBanner {
-            sections.append(.importKeyBanner)
-        } else if shouldShowPasscodeBanner {
+//        if shouldShowImportKeyBanner {
+//            sections.append(.importKeyBanner)
+//        } else
+        if shouldShowPasscodeBanner {
             sections.append(.passcodeBanner)
         }
 
@@ -211,15 +212,15 @@ class BalancesViewController: LoadableViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch sections[section] {
-        case .importKeyBanner, .passcodeBanner: return 1
+        case .passcodeBanner: return 1
         case .balances(items: let items): return items.count
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section] {
-        case .importKeyBanner:
-            return importKeyBanner(indexPath: indexPath)
+//        case .importKeyBanner:
+//            return importKeyBanner(indexPath: indexPath)
         case .passcodeBanner:
             return createPasscodeBanner(indexPath: indexPath)
         case .balances(items: let items):

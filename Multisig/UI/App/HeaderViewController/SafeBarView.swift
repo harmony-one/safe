@@ -38,7 +38,7 @@ class SafeBarView: UINibView {
     override func awakeFromNib() {
         super.awakeFromNib()
         textLabel.setStyle(.headline)
-        detailLabel.setStyle(.subheadline)
+        detailLabel.setStyle(.footnote)
         accessoryLabel.setStyle(.bodyTertiary)
     }
 
