@@ -42,7 +42,9 @@ class AssetsViewController: ContainerViewController {
         ]
         segmentVC.selectedIndex = 0
         
-        viewControllers.append(segmentVC)
+      //  viewControllers.append(segmentVC)
+        viewControllers.append(BalancesViewController())
+
         
         displayChild(at: 0, in: contentView)
         
